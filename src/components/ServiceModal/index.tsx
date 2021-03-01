@@ -1,4 +1,6 @@
-import React, { FC } from 'react';
+import classNames from 'classnames';
+import React, { FC, useState } from 'react';
+import { useToasts } from 'react-toast-notifications';
 
 import IconSVG1 from '../../images/svg/icon1.svg';
 import IconSVG2 from '../../images/svg/icon2.svg';
@@ -10,11 +12,49 @@ type ServiceModalType = {
   onClose: () => void
 };
 
+// email: (val) => {
+//   let error = null;
+//   const emailValidation = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+//   if (!emailValidation.test(val)) {
+//     error = 'E-mail введений не вірно!';
+//   }
+//   return error;
+// }
+
 const ServiceModal: FC<ServiceModalType> = (
   {
     onClose
   }
 ) => {
+  const { addToast } = useToasts();
+
+  const [formValues, setFormValues] = useState({
+    disinfection: '',
+    deratization: '',
+    disinsection: '',
+    otherServices: '',
+    name: '',
+    surname: '',
+    email: '',
+    tel: '',
+    typeOfPlace: '',
+    widthOfPlace: '',
+    descriptionOfProblem: ''
+  });
+
+  const setValue = (
+    nameOfField: string,
+    event: {
+      target: {
+        value: string | number
+      }
+    }
+  ) => {
+    setFormValues({
+      ...formValues,
+      [nameOfField]: event.target.value
+    });
+  }
 
   const encode = (data: any) => {
     return Object.keys(data)
@@ -22,32 +62,80 @@ const ServiceModal: FC<ServiceModalType> = (
       .join("&");
   }
 
-  const handleNetworkError = () => {
-    console.log("submit Error");
-  }
-
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log(e, 'ee');
-    // sendMessage(values);
-  }
 
-  const sendMessage = (values) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "заказ услуги", ...values })
+      body: encode({ "form-name": "orderService", ...formValues })
     })
-      .then(() => {
-        console.log("Form submission success");
-        // handleCloseModal();
-        // navigate("/success");
-      })
-      .catch(error => {
-        console.error("Form submission error:", error);
-        handleNetworkError();
+    .then(() => {
+      console.log("Form submission success");
+      addToast('Форма успешно отправлена.', {
+        appearance: 'success',
+        autoDismiss: true
       });
+      onClose();
+    })
+    .catch(error => {
+      addToast(error, {
+        appearance: 'error',
+        autoDismiss: true
+      });
+      console.error("Form submission error:", error);
+    });
   }
+
+  const nameClasses = classNames(
+    styles.input,
+    {
+      [styles.activeInput]: formValues.name
+    }
+  );
+
+  const surnameClasses = classNames(
+    styles.input,
+    {
+      [styles.activeInput]: formValues.surname
+    }
+  );
+
+  const emailClasses = classNames(
+    styles.input,
+    {
+      [styles.activeInput]: formValues.email
+    }
+  );
+
+  const telClasses = classNames(
+    styles.input,
+    {
+      [styles.activeInput]: formValues.tel
+    }
+  );
+
+  const typeOfPlaceClasses = classNames(
+    styles.input,
+    {
+      [styles.activeInput]: formValues.typeOfPlace
+    }
+  );
+
+  const widthOfPlaceClasses = classNames(
+    styles.input,
+    {
+      [styles.activeInput]: formValues.widthOfPlace
+    }
+  );
+
+  const descriptionOfProblemClasses = classNames(
+    styles.input,
+    styles.textarea,
+    {
+      [styles.activeInput]: formValues.descriptionOfProblem
+    }
+  );
 
   return (
     <div className={styles.serviceModalContent}>
@@ -62,55 +150,126 @@ const ServiceModal: FC<ServiceModalType> = (
         >
           <div className={styles.typesOfService}>
             <div className={styles.checkboxWrap}>
-              <input type='checkbox' id='disinfection' name='disinfection' className={styles.checkbox} />
+              <input
+                type='checkbox'
+                id='disinfection'
+                name='disinfection'
+                className={styles.checkbox}
+                onChange={(value) => setValue('disinfection', value)}
+              />
               <label className={styles.label} htmlFor='disinfection'>Дезинфекция</label>
               <IconSVG1 className={styles.svgIcon} />
             </div>
             <div className={styles.checkboxWrap}>
-              <input type='checkbox' id='deratization' name='deratization' className={styles.checkbox} />
+              <input
+                type='checkbox'
+                id='deratization'
+                name='deratization'
+                className={styles.checkbox}
+                onChange={(value) => setValue('deratization', value)}
+              />
               <label className={styles.label} htmlFor='deratization'>Дератизация</label>
               <IconSVG2 className={styles.svgIcon} />
             </div>
             <div className={styles.checkboxWrap}>
-              <input type='checkbox' id={'disinsection'} name='disinsection' className={styles.checkbox} />
+              <input
+                type='checkbox'
+                id={'disinsection'}
+                name='disinsection'
+                className={styles.checkbox}
+                onChange={(value) => setValue('disinsection', value)}
+              />
               <label className={styles.label} htmlFor='disinsection'>Дезинсекция</label>
               <IconSVG3 className={styles.svgIcon} />
             </div>
             <div className={styles.checkboxWrap}>
-              <input type='checkbox' id='otherServices' name='otherServices' className={styles.checkbox} />
+              <input
+                type='checkbox'
+                id='otherServices'
+                name='otherServices'
+                className={styles.checkbox}
+                onChange={(value) => setValue('otherServices', value)}
+              />
               <label className={styles.label} htmlFor='otherServices'>Другие услуги</label>
             </div>
           </div>
           <div className={styles.inputsWrap}>
             <div className={styles.inputWrap} id={styles.name}>
-              <input type='input'
-                autoComplete='off' id='nameField' name='name' className={styles.input} />
-              <label className={styles.label} htmlFor='nameField'>Имя</label>
+              <input
+                required
+                type='text'
+                name='name'
+                id='nameField'
+                autoComplete='off'
+                aria-required="true"
+                className={nameClasses}
+                onChange={(value) => setValue('name', value)}
+
+              />
+              <label className={`${styles.label} ${styles.isRequired}`} htmlFor='nameField'>Имя</label>
             </div>
             <div className={styles.inputWrap} id={styles.surname}>
-              <input type='input'
-                autoComplete='off' id='surnameField' name='surname' className={styles.input} />
+              <input
+                type='text'
+                name='surname'
+                id='surnameField'
+                autoComplete='off'
+                className={surnameClasses}
+                onChange={(value) => setValue('surname', value)}
+              />
               <label className={styles.label} htmlFor='surnameField'>Фамилия</label>
             </div>
             <div className={styles.inputWrap} id={styles.email}>
-              <input type='input'
-                autoComplete='off' id='emailField' name='email' className={styles.input} />
-              <label className={styles.label} htmlFor='emailField'>Email</label>
+              <input
+                required
+                type='email'
+                name='email'
+                id='emailField'
+                autoComplete='off'
+                aria-required="true"
+                className={emailClasses}
+                onChange={(value) => setValue('email', value)}
+              />
+              <label className={`${styles.label} ${styles.isRequired}`} htmlFor='emailField'>Email</label>
             </div>
             <div className={styles.inputWrap} id={styles.tel}>
-              <input type='input'
-                autoComplete='off' id='telField' name='tel' className={styles.input} />
-              <label className={styles.label} htmlFor='telField'>Телефон</label>
+              <input
+                required
+                name='tel'
+                type='tel'
+                id='telField'
+                autoComplete='off'
+                aria-required="true"
+                className={telClasses}
+                onChange={(value) => setValue('tel', value)}
+              />
+              <label className={`${styles.label} ${styles.isRequired}`} htmlFor='telField'>Телефон</label>
             </div>
             <div className={styles.inputWrap} id={styles.typeOfPlace}>
-              <input type='input'
-                autoComplete='off' id='typeOfPlaceField' name='typeOfPlace' className={styles.input} />
-              <label className={styles.label} htmlFor='typeOfPlaceField'>Тип помещения</label>
+              <input
+                required
+                type='text'
+                name='typeOfPlace'
+                autoComplete='off'
+                aria-required="true"
+                id='typeOfPlaceField'
+                className={typeOfPlaceClasses}
+                onChange={(value) => setValue('typeOfPlace', value)}
+              />
+              <label className={`${styles.label} ${styles.isRequired}`} htmlFor='typeOfPlaceField'>Тип помещения</label>
             </div>
             <div className={styles.inputWrap} id={styles.widthOfPlace}>
-              <input type='input'
-                autoComplete='off' id='widthOfPlaceField' name='widthOfPlace' className={styles.input} />
-              <label className={styles.label} htmlFor='widthOfPlaceField'>Размер помещения в м²</label>
+              <input
+                required
+                type='number'
+                autoComplete='off'
+                name='widthOfPlace'
+                aria-required="true"
+                id='widthOfPlaceField'
+                className={widthOfPlaceClasses}
+                onChange={(value) => setValue('widthOfPlace', value)}
+              />
+              <label className={`${styles.label} ${styles.isRequired}`} htmlFor='widthOfPlaceField'>Размер помещения в м²</label>
             </div>
             <div className={styles.inputWrap} id={styles.descriptionOfProblem}>
               <textarea
@@ -118,7 +277,8 @@ const ServiceModal: FC<ServiceModalType> = (
                 autoComplete='off'
                 name='descriptionOfProblem'
                 id='descriptionOfProblemField'
-                className={`${styles.input} ${styles.textarea}`}
+                className={descriptionOfProblemClasses}
+                onChange={(value) => setValue('descriptionOfProblem', value)}
               />
               <label className={styles.label} htmlFor='descriptionOfProblemField'>Описание проблемы</label>
             </div>

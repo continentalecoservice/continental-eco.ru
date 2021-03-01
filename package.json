@@ -18,6 +18,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "gatsby": "^2.32.4",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-feed": "^2.13.0",
@@ -36,7 +37,8 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-responsive": "^8.2.0",
-    "react-responsive-modal": "^6.0.1"
+    "react-responsive-modal": "^6.0.1",
+    "react-toast-notifications": "^2.4.3"
   },
   "devDependencies": {
     "@types/node": "^14.14.31",

@@ -103,8 +103,9 @@
   border-color: #068DAA;
 }
 
+.checkbox:hover+label::before,
 .checkbox:focus+label::before {
-  box-shadow: 0 0 0 2px rgb(6 141 170 / 40%);
+  border-color: #068DAA;
 }
 
 .checkbox:focus:not(:checked)+label::before {
@@ -141,36 +142,52 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.input:hover {
+  background-color: #C8E5EB;
+}
+
 .input:focus,
-.input:active {
+.input:active,
+.input.activeInput {
   outline: none;
   color: #242424;
   border: 1px solid #068DAA;
   background-color: transparent;
 }
 
-.input:focus+label,
-.input:active+label {
+.input:focus +label,
+.input:active +label,
+.input.activeInput +label {
   left: 0;
-  top: -25px;
-  bottom: unset;
+  top: -50%;
   font-size: 14px;
   font-weight: 300;
   color: #242424;
   line-height: 16px;
+  transform: translateY(0);
 }
 
 .inputWrap .label {
-  top: 0;
-  bottom: 0;
+  top: 50%;
   left: 16px;
-  display: flex;
   line-height: 1;
   font-size: 16px;
   color: #8B8F90;
   position: absolute;
-  align-items: center;
+  pointer-events: none;
+  transform: translateY(-50%);
   font-family: 'Open Sans', sans-serif;
+}
+
+.inputWrap .label.isRequired:after {
+  content: '\2217';
+  top: -5px;
+  height: 8px;
+  right: -10px;
+  line-height: 0;
+  font-size: 18px;
+  color: #912424;
+  position: absolute;
 }
 
 .textarea {
@@ -178,14 +195,14 @@
   resize: none;
 }
 
-.textarea+label {
-  padding-top: 22px;
-  align-items: flex-start !important;
+.inputWrap .textarea +.label {
+  top: 22px;
 }
 
-.textarea:focus+label,
-.textarea:active+label {
-  padding-top: 0;
+.inputWrap .textarea:focus +.label,
+.inputWrap .textarea.activeInput +.label,
+.inputWrap .textarea:active +.label {
+  top: -30px;
 }
 
 #name {
