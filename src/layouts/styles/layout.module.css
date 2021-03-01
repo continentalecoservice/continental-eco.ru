@@ -1,0 +1,9 @@
+.offsetTop {
+  margin-top: 95px;
+}
+
+@media(max-width: 768px) {
+  .offsetTop {
+    margin-top: 55px;
+  }
+}

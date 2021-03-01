@@ -1,11 +1,11 @@
-import { Modal } from 'react-responsive-modal';
-import { ContactModal } from '../ContactModal/ContactModal';
+import Modal from 'react-responsive-modal';
+import { ServiceModal } from '../ServiceModal';
 import React, { useCallback, useMemo, useReducer } from 'react';
+import { ContactModal } from '../ContactModal/ContactModal';
 import { initialModalsState, ModalNames, ModalContext } from './const';
 import { ModalsReducerAction, ModalsState, ProviderValue } from './types';
 
-import { ServiceModal } from '../ServiceModal';
-
+// @ts-ignore
 import styles from './styles/index.module.css';
 
 const modalsReducer = (state: ModalsState, { isOpen, modalName, data }: ModalsReducerAction) => {
@@ -18,7 +18,7 @@ const modalsReducer = (state: ModalsState, { isOpen, modalName, data }: ModalsRe
   };
 };
 
-const ModalsProvider = ({ children }) => {
+const ModalsProvider = ({ children }: any) => {
   const [modalsState, dispatch] = useReducer(modalsReducer, initialModalsState);
 
   const openModal = useCallback((modalName, data: Record<string, unknown> = {}) => {

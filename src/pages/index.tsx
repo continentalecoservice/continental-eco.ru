@@ -1,13 +1,9 @@
 import React from "react"
-import { Header } from "../components/header"
+import { FirstSection } from "../components/home/firstSection";
 
 const IndexPage = () => {
   return (
-    <main>
-      <Header />
-
-      Home
-    </main>
+    <FirstSection />
   )
 }
 

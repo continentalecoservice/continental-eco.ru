@@ -1,0 +1,164 @@
+.firstSection {
+  padding-top: 56px;
+  position: relative;
+  background: url('../../../../images/icon.png') #FDFDFD no-repeat 0 -80px;
+}
+
+.titleAndDescription {
+  margin-bottom: 146px;
+}
+
+.title {
+  line-height: 1;
+  color: #242424;
+  margin-bottom: 32px;
+  letter-spacing: 0.01em;
+  font-family: 'Roboto Slab', serif;
+}
+
+.title span {
+  color: #068DAA;
+}
+
+.description {
+  font-weight: 300;
+  color: #242424;
+  margin-bottom: 32px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.viewService {
+  font-size: 12px;
+  font-weight: 600;
+  color: #068DAA;
+  line-height: 12px;
+  padding: 16px 24px;
+  text-transform: capitalize;
+  background-color: #C8E5EB;
+  border: 1px solid #C8E5EB;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.imgOfSection {
+  top: 0;
+  right: 64px;
+  position: absolute;
+}
+
+@media(min-width: 1550px) {
+  .title {
+    line-height: 1;
+    font-size: 64px;
+  }
+
+  .imgOfSection {
+    max-height: clamp(300px, 70vh, 600px);
+  }
+
+  .titleAndDescription {
+    max-width: 672px;
+    margin-left: 12vw;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media(max-width: 1550px) {
+  .title {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .imgOfSection {
+    max-height: clamp(300px, 70vh, 550px);
+  }
+
+  .titleAndDescription {
+    margin-left: 10vw;
+    max-width: 512px;
+  }
+
+  .description {
+    font-size: 12px;
+    line-height: 28px;
+  }
+}
+
+@media(max-width: 1280px) {
+  .imgOfSection {
+    right: 34px;
+  }
+
+  .titleAndDescription {
+    margin-left: 8vw;
+  }
+}
+
+@media(max-width: 1150px) {
+  .imgOfSection {
+    right: 0;
+  }
+
+  .titleAndDescription {
+    margin-left: clamp(14px, 12vh, 64px);
+  }
+}
+
+@media(max-width: 1080px) {
+  .imgOfSection {
+    display: none;
+  }
+
+  .title {
+    margin-top: 40px;
+    font-size: 40px;
+    line-height: 44px;
+    margin-bottom: 32px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 40px;
+  }
+
+  .titleAndDescription {
+    max-width: 480px;
+    text-align: center;
+    padding: 0 32px;
+    margin: 0 auto 60px;
+  }
+
+  .sliderWrap {
+    margin: 0 32px 0 64px;
+  }
+}
+
+@media(max-width: 680px) {
+  .firstSection {
+    background: url('../../../../images/iconHomeMobile.png') #FDFDFD no-repeat 0 -30px;
+  }
+
+  .titleAndDescription {
+    max-width: 430px;
+    text-align: center;
+    padding: 0 32px;
+    margin: 0 auto 60px;
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 32px;
+  }
+
+  .description {
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 40px;
+  }
+
+}
