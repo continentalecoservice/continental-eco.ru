@@ -22,7 +22,7 @@ const HTML: FC<HTMLTypes> = (props) => {
         <meta name="apple-mobile-web-app-title" content="Lazywill" />
 
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@400;600&family=Roboto+Slab:wght@300;400;600&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300;400;600&family=Roboto+Slab:wght@300;400;600&display=swap" rel="stylesheet" />
         <link rel="apple-touch-icon" href="/icons/apple-icon-57x57.png" sizes="57x57" />
         <link rel="apple-touch-icon" href="/icons/apple-icon-60x60.png" sizes="60x60" />
         <link rel="apple-touch-icon" href="/icons/apple-icon-72x72.png" sizes="72x72" />
