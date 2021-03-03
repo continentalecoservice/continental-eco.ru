@@ -1,3 +1,4 @@
+// @ts-nocheck
 import classNames from 'classnames';
 import React, { FC, useState } from 'react';
 import { useToasts } from 'react-toast-notifications';
@@ -6,7 +7,7 @@ import IconSVG1 from '../../images/svg/icon1.svg';
 import IconSVG2 from '../../images/svg/icon2.svg';
 import IconSVG3 from '../../images/svg/icon3.svg';
 
-import styles from './styles/index.module.css';
+import styles from './styles/service.module.css';
 
 type ServiceModalType = {
   onClose: () => void

@@ -1,5 +1,7 @@
 import React, { FC } from "react";
 import Helmet from "react-helmet";
+
+// @ts-ignore
 import config from "../../../content/meta/config";
 
 interface SEOProps {

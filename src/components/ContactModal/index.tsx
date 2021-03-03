@@ -1,21 +1,16 @@
+// @ts-nocheck
 import React, { FC } from 'react';
-
-import styles from './styles/ContactModal.module.css';
-
-import ChevronSVG from '../../images/svg/Pull-Up-Chevron.svg';
-/* @ts-ignore-next-line */
-import PhoneSVG from '../../images/svg/phone.svg';
-/* @ts-ignore-next-line */
-import ViberSVG from '../../images/svg/viber.svg';
-/* @ts-ignore-next-line */
-import WhatsappSVG from '../../images/svg/wa.svg';
-/* @ts-ignore-next-line */
-import MessengerSVG from '../../images/svg/messenger.svg';
-/* @ts-ignore-next-line */
-import TelegramSVG from '../../images/svg/telegram.svg';
-
-import { useModalsContext } from '../modalsProvider/useModalsContext';
 import { ModalNames } from '../modalsProvider/const';
+import { useModalsContext } from '../modalsProvider/useModalsContext';
+
+import PhoneSVG from '../../images/svg/phone.svg';
+import ViberSVG from '../../images/svg/viber.svg';
+import WhatsappSVG from '../../images/svg/wa.svg';
+import TelegramSVG from '../../images/svg/telegram.svg';
+import MessengerSVG from '../../images/svg/messenger.svg';
+import ChevronSVG from '../../images/svg/Pull-Up-Chevron.svg';
+
+import styles from './styles/contactModal.module.css';
 
 type ContactModalTypes = {
   onCLoseModal: () => void

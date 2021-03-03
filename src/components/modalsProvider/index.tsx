@@ -1,7 +1,7 @@
 import Modal from 'react-responsive-modal';
-import { ServiceModal } from '../ServiceModal';
+import { ServiceModal } from '../serviceModal';
 import React, { useCallback, useMemo, useReducer } from 'react';
-import { ContactModal } from '../ContactModal/ContactModal';
+import { ContactModal } from '../contactModal';
 import { initialModalsState, ModalNames, ModalContext } from './const';
 import { ModalsReducerAction, ModalsState, ProviderValue } from './types';
 

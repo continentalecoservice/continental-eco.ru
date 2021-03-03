@@ -157,7 +157,7 @@
 
 @media(max-width: 1080px) {
   .sliderWrap {
-    margin-left: 40px;
+    margin-left: 60px;
     max-height: 181px;
     grid-template-columns: minmax(70%, 730px) 100px;
   }
@@ -219,6 +219,6 @@
     height: 420px;
     display: block;
     max-height: 100%;
-    margin: 0 10px 58px 0px;
+    margin: 0 10px 0 0px;
   }
 }
