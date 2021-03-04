@@ -2,13 +2,9 @@ import React, { useRef } from 'react';
 // @ts-ignore
 import Slider from "react-slick";
 
-// @ts-ignore
 import Img1 from '../../../../images/slider/img1.jpg';
-// @ts-ignore
 import ArrowLeftSVG from '../../../../images/svg/arrowLeft.svg';
-// @ts-ignore
 import ArrowRightSVG from '../../../../images/svg/arrowRight.svg';
-// @ts-ignore
 import styles from './styles/slider.module.css';
 
 type SliderAboutDesinfectionType = {

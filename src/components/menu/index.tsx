@@ -1,17 +1,12 @@
 import { Link } from 'gatsby';
 import React, { FC, useState } from 'react';
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
-
-/* @ts-ignore-next-line */
-import BurgerSVG from '../../images/svg/burger.svg';
-/* @ts-ignore-next-line */
-import BurgerOpenSVG from '../../images/svg/burger-open.svg';
-
 import { useIsMobile } from '../hooks/useIsMobile';
+import BurgerSVG from '../../images/svg/burger.svg';
 import { ModalNames } from '../modalsProvider/const';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import BurgerOpenSVG from '../../images/svg/burger-open.svg';
 import { useModalsContext } from '../modalsProvider/useModalsContext';
 
-// @ts-ignore
 import styles from './styles/menu.module.css';
 
 const Menu: FC = () => {

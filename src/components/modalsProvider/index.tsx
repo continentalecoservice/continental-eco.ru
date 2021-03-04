@@ -5,7 +5,6 @@ import { ContactModal } from '../contactModal';
 import { initialModalsState, ModalNames, ModalContext } from './const';
 import { ModalsReducerAction, ModalsState, ProviderValue } from './types';
 
-// @ts-ignore
 import styles from './styles/index.module.css';
 
 const modalsReducer = (state: ModalsState, { isOpen, modalName, data }: ModalsReducerAction) => {

@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-// @ts-ignore
 import styles from './styles/expertise.module.css';
 
-// @ts-ignore
 import OurErviceImg from '../../../images/ourErviceImg.jpg';
 
 export const ExpertiseSection = () => {

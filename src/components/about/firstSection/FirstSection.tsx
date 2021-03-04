@@ -1,11 +1,8 @@
 import React from 'react';
 
-// @ts-ignore
 import ImgOfSection from '../../../images/imgOfFirstScreen.png';
-// @ts-ignore
 import VideoOfSection from '../../../images/videoInHome.mp4';
 import { SliderAboutDesinfection } from './slider';
-// @ts-ignore
 import styles from './styles/home.module.css';
 
 const FirstSection = () => {

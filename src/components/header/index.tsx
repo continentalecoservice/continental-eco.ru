@@ -5,10 +5,8 @@ import { useIsMobile } from '../hooks/useIsMobile';
 import { ModalNames } from '../modalsProvider/const';
 import { useModalsContext } from '../modalsProvider/useModalsContext';
 
-// @ts-ignore
 import styles from './styles/header.module.css';
 
-// @ts-ignore
 import LogoSVG from '../../images/svg/logo.svg';
 
 const Header: FC = () => {

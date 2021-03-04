@@ -109,7 +109,7 @@ section {
 
 * {
   box-sizing: border-box;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a {
@@ -118,6 +118,7 @@ a {
 
 body {
   line-height: 1;
+  background-color: #FDFDFD;
 }
 
 ol,
