@@ -84,7 +84,7 @@ module.exports = {
         ]
       }
     },
-    {
+    /* {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `
@@ -143,6 +143,6 @@ module.exports = {
           },
         ],
       },
-    },
+    }, */
   ]
 }

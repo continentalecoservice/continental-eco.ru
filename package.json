@@ -12,7 +12,7 @@
     "develop": "gatsby develop --graphql-tracing",
     "start": "gatsby develop",
     "build": "gatsby build --graphql-tracing",
-    "serve": "gatsby serve --graphql-tracing",
+    "serve": "gatsby serve",
     "clean": "gatsby clean",
     "generate-app-icons": "sh ./scripts/generate-app-icons.sh",
     "type-check": "tsc --noEmit"

@@ -1,11 +1,11 @@
 import Modal from 'react-responsive-modal';
-import { ServiceModal } from '../serviceModal';
 import React, { useCallback, useMemo, useReducer } from 'react';
-import { ContactModal } from '../contactModal';
 import { initialModalsState, ModalNames, ModalContext } from './const';
 import { ModalsReducerAction, ModalsState, ProviderValue } from './types';
 
 import styles from './styles/index.module.css';
+import { ContactModal } from '../contactModal';
+import { ServiceModal } from '../serviceModal';
 
 const modalsReducer = (state: ModalsState, { isOpen, modalName, data }: ModalsReducerAction) => {
   return {
@@ -59,8 +59,7 @@ const ModalsProvider = ({ children }: any) => {
         onClose={handleCloseOrderServiceModal}
         open={modalsState[ModalNames.ORDER_SERVICE].isOpen}
       >
-        <ServiceModal
-          onClose={handleCloseOrderServiceModal}
+        <ServiceModal onClose={handleCloseOrderServiceModal}
         />
       </Modal>
       <Modal
@@ -74,7 +73,7 @@ const ModalsProvider = ({ children }: any) => {
         onClose={handleCloseContactModal}
         open={modalsState[ModalNames.TO_CONTACT].isOpen}
       >
-        <ContactModal onCLoseModal={handleCloseContactModal} />
+        <ContactModal onCLose={handleCloseContactModal} />
       </Modal>
     </>
   );

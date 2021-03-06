@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { FC } from 'react';
 import { ModalNames } from '../modalsProvider/const';
 import { useModalsContext } from '../modalsProvider/useModalsContext';
@@ -13,12 +12,12 @@ import ChevronSVG from '../../images/svg/Pull-Up-Chevron.svg';
 import styles from './styles/contactModal.module.css';
 
 type ContactModalTypes = {
-  onCLoseModal: () => void
+  onCLose: () => void
 }
 
 const ContactModal: FC<ContactModalTypes> = (
   {
-    onCLoseModal
+    onCLose
   }
 ) => {
   const { openModal } = useModalsContext();
@@ -29,7 +28,7 @@ const ContactModal: FC<ContactModalTypes> = (
 
   return (
     <div className={styles.ContactModal}>
-      <button className={styles.buttonClose} onClick={onCLoseModal} >
+      <button className={styles.buttonClose} onClick={onCLose} >
         <ChevronSVG className={styles.chevronIcon} />
       </button>
       <ul className={styles.contactsList}>
