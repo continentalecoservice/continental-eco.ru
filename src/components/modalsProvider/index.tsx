@@ -4,8 +4,8 @@ import { initialModalsState, ModalNames, ModalContext } from './const';
 import { ModalsReducerAction, ModalsState, ProviderValue } from './types';
 
 import styles from './styles/index.module.css';
-import { ContactModal } from '../contactModal';
-import { ServiceModal } from '../serviceModal';
+import { ContactModal } from '../contactModal/index';
+import { ServiceModal } from '../serviceModal/index';
 
 const modalsReducer = (state: ModalsState, { isOpen, modalName, data }: ModalsReducerAction) => {
   return {
