@@ -6,7 +6,7 @@ import { ModalsReducerAction, ModalsState, ProviderValue } from './types';
 import { ContactModal } from '../ContactModal';
 import { ServiceModal } from '../ServiceModal';
 
-import styles from './styles/modalsProvider.module.css';
+import * as styles from './modalsProvider.module.css';
 
 const modalsReducer = (state: ModalsState, { isOpen, modalName, data }: ModalsReducerAction) => {
   return {
