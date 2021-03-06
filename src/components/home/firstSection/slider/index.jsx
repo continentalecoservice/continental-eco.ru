@@ -1,21 +1,14 @@
 import React, { useRef } from 'react';
-// @ts-ignore
 import Slider from "react-slick";
 
 import Img1 from '../../../../images/slider/img1.jpg';
 import ArrowLeftSVG from '../../../../images/svg/arrowLeft.svg';
 import ArrowRightSVG from '../../../../images/svg/arrowRight.svg';
-import styles from './styles/slider.module.css';
 
-type SliderAboutDesinfectionType = {
-  current: {
-    slickNext: () => void
-    slickPrev: () => void
-  }
-}
+import styles from './styles/sliderAboutDesinfection.module.css';
+
 export const SliderAboutDesinfection = () => {
-  // @ts-ignore
-  const customSlider: SliderAboutDesinfectionType = useRef({});
+  const customSlider = useRef({});
 
   const settings = {
     speed: 500,
@@ -36,7 +29,6 @@ export const SliderAboutDesinfection = () => {
   return (
     <div className={styles.sliderWrap}>
       <div className={styles.sliderItemsWrap}>
-       {/* @ts-ignore */}
         <Slider ref={slider => customSlider.current = slider}
           {...settings}
         >

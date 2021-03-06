@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import React, { FC, useState } from 'react';
+import React, { useState } from 'react';
 import { useIsMobile } from '../hooks/useIsMobile';
 import BurgerSVG from '../../images/svg/burger.svg';
 // import { ModalNames } from '../modalsProvider/const';
@@ -9,7 +9,7 @@ import BurgerOpenSVG from '../../images/svg/burger-open.svg';
 
 import styles from './styles/menu.module.css';
 
-const Menu: FC = () => {
+const Menu = () => {
   const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
   const isMobile = useIsMobile();
   // const { openModal } = useModalsContext();

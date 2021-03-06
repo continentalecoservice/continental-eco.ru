@@ -1,15 +1,6 @@
-import React, { FC } from 'react';
+import React from 'react';
 
-type HTMLTypes = {
-  htmlAttributes: {},
-  headComponents: {},
-  bodyAttributes: {},
-  preBodyComponents: {},
-  postBodyComponents: {},
-  body: ''
-}
-
-const HTML: FC<HTMLTypes> = (props) => {
+const HTML = (props) => {
   return (
     <html {...props.htmlAttributes}>
       <head>
