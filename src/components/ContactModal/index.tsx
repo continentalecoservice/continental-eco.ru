@@ -9,7 +9,7 @@ import TelegramSVG from '../../images/svg/telegram.svg';
 import MessengerSVG from '../../images/svg/messenger.svg';
 import ChevronSVG from '../../images/svg/Pull-Up-Chevron.svg';
 
-import styles from './styles/contactModal.module.css';
+import styles from './styles/ContactModal.module.css';
 
 type ContactModalTypes = {
   onCLose: () => void
