@@ -1,0 +1,60 @@
+.ContactModal {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 24px 24px;
+  background: #FDFDFD;
+  border-radius: 28px 28px 0px 0px;
+}
+
+.buttonClose {
+  padding: 0;
+  border: none;
+  margin: 0 auto 22px;
+  background-color: transparent;
+}
+
+.contactsList::after {
+  content: '';
+  height: 1px;
+  display: block;
+  margin-bottom: 12px;
+  background-color: #C8E5EB;
+}
+
+.contactItem {
+  display: flex;
+  padding: 16px 24px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  justify-content: center;
+  background-color: #C8E5EB;
+  border: 1px solid #C8E5EB;
+}
+
+.contactItem .icon {
+  margin-right: 10px;
+}
+
+.contactLink {
+  display: flex;
+  font-size: 12px;
+  color: #068DAA;
+  font-weight: 600;
+  line-height: 12px;
+  align-items: center;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.orderServiceButton {
+  font-size: 12px;
+  font-weight: 600;
+  color: #FDFDFD;
+  line-height: 12px;
+  border-radius: 4px;
+  padding: 16px 24px;
+  background-color: #068DAA;
+  border: 1px solid #068DAA;
+  font-family: 'Open Sans', sans-serif;
+
+}
