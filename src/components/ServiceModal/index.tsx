@@ -6,7 +6,7 @@ import IconSVG1 from '../../images/svg/icon1.svg';
 import IconSVG2 from '../../images/svg/icon2.svg';
 import IconSVG3 from '../../images/svg/icon3.svg';
 
-import styles from './styles/serviceModal.module.css';
+import * as styles from './styles/serviceModal.module.css';
 
 type ServiceModalType = {
   onClose: () => void
