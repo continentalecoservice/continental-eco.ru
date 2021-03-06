@@ -10,8 +10,9 @@ module.exports = {
     `gatsby-plugin-anchor-links`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
     `gatsby-transformer-typescript-css-modules`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -24,6 +25,14 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         include: /svg/
+      }
+    },
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true, // defaults to false
+        //jsxPragma: `jsx`, // defaults to "React"
+        allExtensions: true, // defaults to false
       }
     },
     `gatsby-plugin-layout`,

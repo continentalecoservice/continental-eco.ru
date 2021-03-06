@@ -1,7 +1,7 @@
 module.exports = {
-  siteTitle: "Kobvel.com - Mikki Kobvel",
-  shortSiteTitle: "Mikki Kobvel - Top Software Solutions for Startups", // <title> ending for posts and pages
-  siteDescription: "Building Software products with the philosophy in mind.",
+  siteTitle: "continental-eco.ru - Дезинфекция вашего помещения",
+  shortSiteTitle: "Дезинфекция вашего помещения", // <title> ending for posts and pages
+  siteDescription: "Компания Континентал Экосервис занимается дератизацией, дезинсекцией (уничтожение тараканов и иных насекомых, крыс, мышей), дезинфекцией помещений (уничтожение бактерий, грибков, вирусов, плесени).",
   siteUrl: "http://continental-eco.ru",
   pathPrefix: "",
   siteImage: "preview.jpg",
@@ -12,8 +12,8 @@ module.exports = {
   authorName: "Oleksandr Bilyi",
 
   /* manifest.json */
-  manifestName: "Mikki Kobvel",
-  manifestShortName: "MikkiKobvel", // max 12 characters
+  manifestName: "Oleksandr Bilyi",
+  manifestShortName: "AlexBilyi", // max 12 characters
   manifestStartUrl: "/index.html",
   manifestBackgroundColor: "white",
   manifestThemeColor: "#666",
