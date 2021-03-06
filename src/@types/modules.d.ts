@@ -3,6 +3,7 @@ declare module "*.png";
 declare module "*.svg";
 declare module "*.css";
 declare module "*.mp4";
+declare module "classnames";
 
 /**
  * Warning : don't export anything here : https://stackoverflow.com/a/59282975/968988

@@ -10,8 +10,9 @@ module.exports = {
     `gatsby-plugin-anchor-links`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
     `gatsby-transformer-typescript-css-modules`,
     {
       resolve: `gatsby-source-filesystem`,

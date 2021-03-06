@@ -33,7 +33,7 @@ const Menu: FC = () => {
           <Link className={styles.menuLink} to='/about'>О нас</Link>
         </li>
         <li className={styles.menuItem}>
-          <Link className={styles.menuLink} to='/service'>Услуги</Link>
+          <Link className={styles.menuLink} to='/services'>Услуги</Link>
         </li>
         <li className={styles.menuItem}>
           <AnchorLink stripHash to="/#contacts" className={styles.menuLink} title="Контакты">

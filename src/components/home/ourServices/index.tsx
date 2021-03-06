@@ -3,7 +3,7 @@ import React from 'react';
 
 import VirusSVG from '../../../images/svg/virus.svg';
 import RatSVG from '../../../images/svg/rat.svg';
-import BagSVG from '../../../images/svg/insect.svg';
+import BagSVG from '../../../images/svg/bag.svg';
 import ArrowSVG from '../../../images/svg/right.svg';
 import styles from './styles/ourServices.module.css';
 
