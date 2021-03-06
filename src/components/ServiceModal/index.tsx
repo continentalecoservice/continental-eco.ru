@@ -1,4 +1,3 @@
-// @ts-nocheck
 import classNames from 'classnames';
 import React, { FC, useState } from 'react';
 import { useToasts } from 'react-toast-notifications';
@@ -22,7 +21,7 @@ type ServiceModalType = {
 //   return error;
 // }
 
-const ServiceModal: FC<ServiceModalType> = (
+export const ServiceModal: FC<ServiceModalType> = (
   {
     onClose
   }
@@ -290,5 +289,3 @@ const ServiceModal: FC<ServiceModalType> = (
     </div>
   );
 };
-
-export { ServiceModal };

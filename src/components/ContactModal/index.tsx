@@ -15,7 +15,7 @@ type ContactModalTypes = {
   onCLose: () => void
 }
 
-const ContactModal: FC<ContactModalTypes> = (
+export const ContactModal: FC<ContactModalTypes> = (
   {
     onCLose
   }
@@ -77,5 +77,3 @@ const ContactModal: FC<ContactModalTypes> = (
     </div>
   );
 };
-
-export { ContactModal };
