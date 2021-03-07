@@ -1,8 +1,8 @@
 import React from 'react';
-import { ToastProvider } from 'react-toast-notifications';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import { ModalsProvider } from '../components/modalsProvider';
+import { ToastProvider } from 'react-toast-notifications';
 
 import * as styles from './layout.module.css';
 
