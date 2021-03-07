@@ -6,12 +6,12 @@ import { OurContacts } from "../components/OurContacts/index.js";
 
 const IndexPage = () => {
   return (
-    <>
+    <React.Fragment>
       <FirstSection />
       <ExpertiseSection />
       <OurServices />
       <OurContacts />
-    </>
+    </React.Fragment>
   )
 }
 

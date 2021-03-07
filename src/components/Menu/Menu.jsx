@@ -7,7 +7,7 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import BurgerOpenSVG from '../../images/svg/burger-open.svg';
 // import { useModalsContext } from '../ModalsProvider/useModalsContext';
 
-import * as styles from './styles/menu.module.css';
+import * as styles from './menu.module.css';
 
 const Menu = () => {
   const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
