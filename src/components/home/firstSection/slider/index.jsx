@@ -5,7 +5,7 @@ import Img1 from '../../../../images/slider/img1.jpg';
 import ArrowLeftSVG from '../../../../images/svg/arrowLeft.svg';
 import ArrowRightSVG from '../../../../images/svg/arrowRight.svg';
 
-import styles from './styles/sliderAboutDesinfection.module.css';
+import * as styles from './sliderAboutDesinfection.module.css';
 
 export const SliderAboutDesinfection = () => {
   const customSlider = useRef({});

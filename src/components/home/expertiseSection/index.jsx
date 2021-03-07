@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import styles from './styles/expertiseSection.module.css';
+import * as styles from './expertiseSection.module.css';
 
 import OurErviceImg from '../../../images/ourErviceImg.jpg';
 

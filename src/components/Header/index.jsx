@@ -1,21 +1,20 @@
 import { Link } from 'gatsby';
-import { Menu } from '../menu';
+import { Menu } from '../Menu';
 import React from 'react';
 import { useIsMobile } from '../hooks/useIsMobile';
-// import { ModalNames } from '../modalsProvider/const';
-// import { useModalsContext } from '../modalsProvider/useModalsContext';
+import { ModalNames } from '../ModalsProvider/const';
+import { useModalsContext } from '../ModalsProvider/useModalsContext';
 
-import styles from './styles/header.module.css';
+import * as styles from './header.module.css';
 
 import LogoSVG from '../../images/svg/logo.svg';
 
 const Header = () => {
-  // const { openModal } = useModalsContext();
+  const { openModal } = useModalsContext();
   const isMobile = useIsMobile();
 
-  const handleOpenOrderServiceModal = () => console.log('click');
-
-  const handleOpenContactModal = () => console.log('click');
+  const handleOpenOrderServiceModal = () => openModal(ModalNames.ORDER_SERVICE);
+  const handleOpenContactModal = () => openModal(ModalNames.TO_CONTACT);
 
   return (
     <header className={styles.header}>

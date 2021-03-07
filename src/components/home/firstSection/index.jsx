@@ -4,7 +4,7 @@ import ImgOfSection from '../../../images/imgOfFirstScreen.png';
 import VideoOfSection from '../../../images/videoInHome.mp4';
 import { SliderAboutDesinfection } from './slider';
 
-import styles from './styles/home.module.css';
+import * as styles from './home.module.css';
 
 const FirstSection = () => {
   return (

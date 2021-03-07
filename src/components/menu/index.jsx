@@ -1,26 +1,27 @@
 import { Link } from 'gatsby';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useIsMobile } from '../hooks/useIsMobile';
 import BurgerSVG from '../../images/svg/burger.svg';
-// import { ModalNames } from '../modalsProvider/const';
+import { ModalContext, ModalNames } from '../ModalsProvider/const';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import BurgerOpenSVG from '../../images/svg/burger-open.svg';
-// import { useModalsContext } from '../modalsProvider/useModalsContext';
+// import { useModalsContext } from '../ModalsProvider/useModalsContext';
 
-import styles from './styles/menu.module.css';
+import * as styles from './styles/menu.module.css';
 
 const Menu = () => {
   const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
   const isMobile = useIsMobile();
   // const { openModal } = useModalsContext();
+  const openModal = useContext(ModalContext);
 
   const handleOpenContactModal = () => {
     handleCloseMobileMenu();
-    // openModal(ModalNames.TO_CONTACT);
+    openModal(ModalNames.TO_CONTACT);
   };
   const handleOpenOrderServiceModal = () => {
     handleCloseMobileMenu();
-    // openModal(ModalNames.ORDER_SERVICE)
+    openModal(ModalNames.ORDER_SERVICE)
   };
 
   const handleOpenMobileMenu = () => setIsOpenMobileMenu(true);

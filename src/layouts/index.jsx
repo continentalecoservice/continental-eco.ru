@@ -1,19 +1,19 @@
 import React from 'react';
 import { ToastProvider } from 'react-toast-notifications';
-import { Footer } from '../components/footer';
-import { Header } from '../components/header';
-// import { ModalsProvider } from '../components/modalsProvider';
+import { Footer } from '../components/Footer';
+import { Header } from '../components/Header';
+import { ModalsProvider } from '../components/modalsProvider';
 
-import styles from './styles/layout.module.css';
+import * as styles from './layout.module.css';
 
 const Layout = ({ children }) => {
   return (
     <ToastProvider>
-      {/* <ModalsProvider> */}
+      <ModalsProvider>
         <Header />
         <main className={styles.offsetTop}>{children}</main>
         <Footer />
-      {/* </ModalsProvider> */}
+      </ModalsProvider>
     </ToastProvider>
   );
 };

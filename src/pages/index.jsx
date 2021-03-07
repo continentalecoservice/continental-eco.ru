@@ -1,8 +1,8 @@
 import React from "react"
-import { FirstSection } from "../components/home/firstSection";
-import { ExpertiseSection } from "../components/home/expertiseSection";
-import { OurServices } from "../components/home/ourServices";
-// import { OurContacts } from "../components/ourContacts";
+import { FirstSection } from "../components/Home/FirstSection";
+import { ExpertiseSection } from "../components/Home/ExpertiseSection";
+import { OurServices } from "../components/Home/OurServices";
+import { OurContacts } from "../components/ourContacts";
 
 const IndexPage = () => {
   return (
@@ -10,7 +10,7 @@ const IndexPage = () => {
       <FirstSection />
       <ExpertiseSection />
       <OurServices />
-      {/* <OurContacts /> */}
+      <OurContacts />
     </>
   )
 }
