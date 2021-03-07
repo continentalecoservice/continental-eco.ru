@@ -5,9 +5,9 @@ import * as styles from './services.module.css';
 import VirusSVG from '../../images/svg/virus.svg';
 import RatSVG from '../../images/svg/rat.svg';
 import BagSVG from '../../images/svg/bag.svg';
-import { DeratizationContent } from './components/deratizationContent';
-import { DesinfectionContent } from './components/desinfectionContent';
-import { DisinsectionContent } from './components/disinsectionContent';
+import { DeratizationContent } from './components/DeratizationContent';
+import { DesinfectionContent } from './components/DesinfectionContent';
+import { DisinsectionContent } from './components/DisinsectionContent';
 
 export const Services = () => {
   const [activeItem, setActiveItem] = useState({
@@ -65,20 +65,26 @@ export const Services = () => {
   return (
     <div className={styles.services}>
       <ul className={styles.navigation}>
-        <li className={classesDesinfectionItem} onClick={handleSetActiveDesinfectionTab}>
-          <h2 className={styles.itemTitle}><span>Де</span>зинфекция</h2>
-          <p className={styles.itemDescription}>уничтожение бактерий, грибков, вирусов, плесени</p>
-          <VirusSVG className={styles.itemIcon} />
+        <li className={classesDesinfectionItem}>
+          <button onClick={handleSetActiveDesinfectionTab}>
+            <h2 className={styles.itemTitle}><span>Де</span>зинфекция</h2>
+            <p className={styles.itemDescription}>уничтожение бактерий, грибков, вирусов, плесени</p>
+            <VirusSVG className={styles.itemIcon} />
+          </button>
         </li>
-        <li className={classesDeratizationItem} onClick={handleSetActiveDeratizationTab}>
-          <h2 className={styles.itemTitle}><span>Де</span>ратизация</h2>
-          <p className={styles.itemDescription}>уничтожение бактерий, грибков, вирусов, плесени</p>
-          <RatSVG className={styles.itemIcon} />
+        <li className={classesDeratizationItem}>
+          <button onClick={handleSetActiveDeratizationTab}>
+            <h2 className={styles.itemTitle}><span>Де</span>ратизация</h2>
+            <p className={styles.itemDescription}>уничтожение бактерий, грибков, вирусов, плесени</p>
+            <RatSVG className={styles.itemIcon} />
+          </button>
         </li>
-        <li className={classesDisinsectionItem} onClick={handleSetActiveDisinsectionTab}>
-          <h2 className={styles.itemTitle}><span>Де</span>зинсекция</h2>
-          <p className={styles.itemDescription}>уничтожение бактерий, грибков, вирусов, плесени</p>
-          <BagSVG className={styles.itemIcon} />
+        <li className={classesDisinsectionItem}>
+          <button onClick={handleSetActiveDisinsectionTab}>
+            <h2 className={styles.itemTitle}><span>Де</span>зинсекция</h2>
+            <p className={styles.itemDescription}>уничтожение бактерий, грибков, вирусов, плесени</p>
+            <BagSVG className={styles.itemIcon} />
+          </button>
         </li>
       </ul>
 

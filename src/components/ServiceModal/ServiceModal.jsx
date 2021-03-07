@@ -134,7 +134,6 @@ export const ServiceModal = (
         <form
           autoComplete='off'
           data-netlify="true"
-          className={styles.form}
           onSubmit={handleSubmit}
           data-netlify-honeypot="bot-field"
         >

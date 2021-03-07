@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div className={styles.leftBlock}>
+      <div>
         <Link to='/'>
           <LogoSVG className={styles.logoIcon} />
         </Link>

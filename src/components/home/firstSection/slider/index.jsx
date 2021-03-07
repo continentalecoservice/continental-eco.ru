@@ -35,24 +35,24 @@ export const SliderAboutDesinfection = () => {
           <div>
             <div className={styles.item}>
               <div className={styles.imgWrap}>
-                <img className={styles.img} src={Img1} />
+                <img className={styles.img} src={Img1} alt='img alt'/>
               </div>
               <div>
                 <h2 className={styles.title}>Дезинфекция</h2>
                 <p className={styles.description}>уничтожение бактерий, грибков, вирусов, плесени</p>
-                <a className={styles.more}>Подробнее</a>
+                <a href='/' className={styles.more}>Подробнее</a>
               </div>
             </div>
           </div>
           <div>
             <div className={styles.item}>
               <div className={styles.imgWrap}>
-                <img className={styles.img} src={Img1} />
+                <img className={styles.img} src={Img1} alt='img alt'/>
               </div>
               <div>
                 <h2 className={styles.title}>Дезинфекция</h2>
                 <p className={styles.description}>уничтожение бактерий, грибков, вирусов, плесени</p>
-                <a className={styles.more}>Подробнее</a>
+                <a href='/' className={styles.more}>Подробнее</a>
               </div>
             </div>
           </div>

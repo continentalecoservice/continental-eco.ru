@@ -25,7 +25,7 @@ export const ContactModal = (
   return (
     <div className={styles.ContactModal}>
       <button className={styles.buttonClose} onClick={onCLose} >
-        <ChevronSVG className={styles.chevronIcon} />
+        <ChevronSVG />
       </button>
       <ul className={styles.contactsList}>
         <li className={styles.contactItem}>
