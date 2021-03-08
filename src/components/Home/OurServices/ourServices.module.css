@@ -1,0 +1,247 @@
+.ourServices {
+  padding: 0 32px;
+  max-width: 1100px;
+  margin: 0 auto 160px;
+}
+
+.title {
+  font-size: 48px;
+  line-height: 52px;
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  font-family: 'Roboto Slab', serif;
+}
+
+.title span {
+  color: #068DAA;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 300;
+  color: #242424;
+  line-height: 32px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.servicesItems {
+  display: grid;
+  grid-gap: 0 56px;
+  margin-top: 102px;
+  justify-content: center;
+  grid-template-rows: 328px;
+  grid-template-columns: repeat(3, minmax(240px, 320px));
+}
+
+.item {
+  z-index: 2;
+  display: flex;
+  position: relative;
+  border-radius: 4px;
+  padding-left: 40px;
+  padding-right: 63px;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 1px solid #C8E5EB; */
+}
+
+.item:hover::before {
+  border-color: #068DAA;
+}
+
+.item:hover::after {
+  background-color: #F3FBFD;
+  transform: translate(-20px, -20px);
+}
+
+.item:hover .linkToDetail {
+  color: #068DAA;
+}
+
+.item:hover .arrowIcon {
+  stroke: #068DAA;
+}
+
+.item:hover .itemIconWrap {
+  right: 30px;
+  bottom: 30px;
+  background-color: transparent;
+}
+
+.item:hover .itemIcon {
+  stroke: #068DAA;
+}
+
+.item::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  content: '';
+  border-radius: 4px;
+  position: absolute;
+  border: 1px solid #C8E5EB;
+  transition: all 0.3s ease-in;
+}
+
+.item::after {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 4px;
+  transform: translate(0);
+  transition: all 0.3s ease-in;
+  background-color: transparent;
+}
+
+.servicesTitle {
+  z-index: 2;
+  font-size: 24px;
+  color: #242424;
+  line-height: 24px;
+  margin-bottom: 24px;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  font-family: 'Roboto Slab', serif;
+}
+
+.servicesTitle span {
+  color: #068DAA;
+}
+
+.servicesDescription {
+  z-index: 2;
+  font-size: 12px;
+  font-weight: 300;
+  color: #242424;
+  line-height: 20px;
+  margin-bottom: 24px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.linkToDetail {
+  z-index: 2;
+  display: flex;
+  font-size: 12px;
+  color: #242424;
+  font-weight: 600;
+  line-height: 20px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.arrowIcon {
+  stroke: #242424;
+  margin-left: 12px;
+  transition: all 0.3s ease-in;
+}
+
+.itemIconWrap {
+  z-index: 3;
+  width: 80px;
+  height: 80px;
+  right: -10px;
+  bottom: -10px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background-color: #FDFDFD;
+  transition: all 0.3s ease-in;
+}
+
+.itemIcon {
+  stroke: #C8E5EB;
+  transition: all 0.3s ease-in;
+}
+
+@media(max-width: 1080px) {
+  .ourServices {
+    padding: 0 49px;
+  }
+
+  .servicesItems {
+    grid-gap: 50px 0;
+    grid-template-rows: repeat(3, 328px);
+    grid-template-columns: minmax(320px, 680px);
+  }
+
+  .servicesTitle {
+    font-size: 32px;
+    line-height: 24px;
+  }
+
+  .servicesDescription {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .linkToDetail {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .item::after {
+    transform: translate(-20px, -20px);
+    background-color: #F3FBFD;
+  }
+
+  .itemIconWrap {
+    right: 30px;
+    bottom: 30px;
+    background-color: transparent;
+  }
+
+  .linkToDetail {
+    color: #068DAA;
+  }
+
+  .arrowIcon,
+  .itemIcon {
+    stroke: #068DAA;
+  }
+}
+
+@media(max-width: 680px) {
+  .ourServices {
+    padding: 0 20px;
+    margin-bottom: 122px;
+  }
+
+  .servicesItems {
+    margin-top: 60px;
+  }
+
+  .servicesTitle {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 12px;
+  }
+
+  .servicesDescription {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .linkToDetail {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .itemIconWrap {
+    width: 44px;
+    height: 44px;
+  }
+}

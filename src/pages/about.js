@@ -3,7 +3,7 @@
 
 const AboutPage = () => {
   return (
-    '<FirstSection />'
+    '<about />'
   );
 };
 
