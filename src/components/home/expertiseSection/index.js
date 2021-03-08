@@ -1,1 +1,0 @@
-export { ExpertiseSection } from './ExpertiseSection';

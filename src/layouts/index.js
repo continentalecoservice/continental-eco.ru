@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer } from '../components/Footer';
+// import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import { ModalsProvider } from '../components/ModalsProvider';
 import { ToastProvider } from 'react-toast-notifications';
@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
       <ModalsProvider>
         <Header />
         <main className={styles.offsetTop}>{children}</main>
-        <Footer />
+        {/* <Footer /> */}
       </ModalsProvider>
     </ToastProvider>
   );

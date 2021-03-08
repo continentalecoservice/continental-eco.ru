@@ -1,1 +1,0 @@
-export { OurServices } from './OurServices';

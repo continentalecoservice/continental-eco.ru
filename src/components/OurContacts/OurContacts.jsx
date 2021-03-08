@@ -17,7 +17,7 @@ export const OurContacts = () => {
   const handleOpenOrderServiceModal = () => openModal(ModalNames.ORDER_SERVICE);
 
   return (
-    <div className={styles.ourContacts}>
+    <div className={styles.ourContacts} id='contacts'>
       <div className={styles.socialLinks}>
         <a className={styles.link} href='/'>
           <span className={styles.linkWrap}>
