@@ -1,10 +1,14 @@
-// import React from 'react';
-// import { FirstSection } from '../components/about/firstSection';
+import React from 'react';
+import { FirstSection } from '../components/About/FirstSection';
+import { SecondSection } from '../components/About/SecondSection';
 
 const AboutPage = () => {
   return (
-    '<about />'
-  );
+    <React.Fragment>
+      <FirstSection />
+      <SecondSection />
+    </React.Fragment>
+  )
 };
 
 export default AboutPage;

@@ -10,13 +10,11 @@
   ],
   "scripts": {
     "develop": "gatsby develop --graphql-tracing",
-    "start": "gatsby develop",
     "build": "gatsby build --graphql-tracing",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "netlify-dev": "netlify dev",
-    "generate-app-icons": "sh ./scripts/generate-app-icons.sh",
-    "type-check": "tsc --noEmit"
+    "generate-app-icons": "sh ./scripts/generate-app-icons.sh"
   },
   "dependencies": {
     "classnames": "^2.2.6",

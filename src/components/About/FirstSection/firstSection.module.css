@@ -1,0 +1,141 @@
+.firstSection {
+  margin-bottom: 163px;
+  background: url('../../../images/iconHome.png') #FDFDFD no-repeat 0 -80px;
+}
+
+.firstSectionWrap {
+  margin: auto;
+  display: grid;
+  max-width: 1556px;
+  padding-top: 148px;
+  grid-gap: 0 100px;
+  justify-content: space-between;
+  grid-template-columns: minmax(320px, 469px) minmax(640px, 940px);
+}
+
+.title {
+  color: #242424;
+  font-size: 64px;
+  line-height: 64px;
+  padding-top: 110px;
+  margin-bottom: 32px;
+  letter-spacing: 0.01em;
+  font-family: 'Roboto Slab', serif;
+}
+
+.title span {
+  color: #068DAA;
+}
+
+.description {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: #242424;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.galery {
+  display: grid;
+  grid-gap: 0 20px;
+  max-width: 940px;
+  align-items: center;
+  justify-self: flex-end;
+  justify-content: center;
+  grid-template-columns: minmax(240px, 1fr) minmax(420px, 1fr) minmax(240px, 1fr);
+}
+
+.smallImg,
+.bigImg {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1550px) {
+
+  .firstSectionWrap {
+    max-width: 1230px;
+  }
+
+  .galery {
+    max-width: 724px;
+    grid-template-columns: minmax(180px, 1fr) minmax(324px, 1fr) minmax(180px, 1fr);
+  }
+
+}
+
+@media (max-width: 1400px) {
+
+  .firstSectionWrap {
+    max-width: 1230px;
+    padding-left: 112px;
+    padding-right: 64px;
+  }
+
+  .galery {
+    max-width: 640px;
+    grid-template-columns: minmax(160px, 1fr) minmax(280px, 1fr) minmax(160px, 1fr);
+  }
+
+}
+
+@media (max-width: 1280px) {
+  .firstSection {
+    margin-bottom: 128px;
+  }
+
+  .firstSectionWrap {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 98px;
+    text-align: center;
+    justify-content: center;
+    grid-template-columns: minmax(320px, 620px);
+  }
+
+  .title {
+    padding-top: 0;
+    font-size: 48px;
+    line-height: 64px;
+  }
+
+  .galery {
+    justify-self: unset;
+  }
+
+  .descriptionWrap {
+    margin-bottom: 64px;
+  }
+}
+
+@media(max-width: 760px) {
+  .firstSection {
+    margin-bottom: 64px;
+  }
+
+  .firstSectionWrap {
+    padding-top: 68px;
+  }
+
+  .descriptionWrap {
+    padding: 0 20px;
+    margin-bottom: 46px;
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .galery {
+    grid-gap: 0 8px;
+    grid-template-columns: minmax(80px, 1fr) minmax(148px, 1fr) minmax(80px, 1fr);
+  }
+}
