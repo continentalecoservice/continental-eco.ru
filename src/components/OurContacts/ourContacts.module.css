@@ -35,13 +35,13 @@
   display: flex;
   position: relative;
   align-items: center;
+  transform: scale(1);
   justify-content: center;
   transition: all 0.3s ease-in;
 }
 
 .link:hover .linkWrap {
-  width: 64px;
-  height: 64px;
+  transform: scale(0.8);
 }
 
 .link:hover .linkWrap::after {
@@ -55,12 +55,7 @@
 
 .link:hover .linkText {
   opacity: 1;
-  transform: translateY(50%);
-}
-
-.link:hover .linkIcon {
-  width: 24px;
-  height: 24px;
+  transform: translateY(50%) scale(1.2);
 }
 
 .linkWrap::after {
