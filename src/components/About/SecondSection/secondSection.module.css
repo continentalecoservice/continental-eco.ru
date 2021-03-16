@@ -1,6 +1,7 @@
 .secondSection {
   display: grid;
-  max-width: 1556px;
+  padding: 0 24px;
+  max-width: 1388px;
   margin: 0 auto 185px;
   justify-content: space-between;
   grid-template-columns: repeat(3, minmax(272px, 292px));
@@ -35,4 +36,24 @@
   font-weight: 300;
   line-height: 25px;
   font-family: 'Open Sans', sans-serif;
+}
+
+@media (max-width: 1550px) {
+  .secondSection {
+    max-width: 1230px;
+  }
+}
+
+@media(max-width: 1080px) {
+  .secondSection {
+    grid-gap: 80px;
+    max-width: 720px;
+    text-align: center;
+    margin-bottom: 155px;
+    grid-template-columns: 1fr;
+  }
+
+  .icon {
+    width: 55px;
+  }
 }
