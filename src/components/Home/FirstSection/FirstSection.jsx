@@ -5,6 +5,7 @@ import VideoOfSection from '../../../images/videoInHome.mp4';
 import { SliderAboutDesinfection } from './slider';
 
 import * as styles from './home.module.css';
+import { Link } from 'gatsby';
 
 const FirstSection = () => {
   return (
@@ -14,7 +15,7 @@ const FirstSection = () => {
         <p className={styles.description}>Компания Континентал Экосервис занимается дератизацией, дезинсекцией
         (уничтожение тараканов и иных насекомых, крыс, мышей), дезинфекцией помещений
              (уничтожение бактерий, грибков, вирусов, плесени).</p>
-        <button className={styles.viewService}>Просмотреть услуги</button>
+        <Link to='/services' className={styles.viewService}>Просмотреть услуги</Link>
       </div>
       <SliderAboutDesinfection />
       <div className={styles.videoWrap}>

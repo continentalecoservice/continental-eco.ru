@@ -55,6 +55,18 @@
   padding: 16px 24px;
   background-color: #068DAA;
   border: 1px solid #068DAA;
+  transition: all .3s ease-in;
   font-family: 'Open Sans', sans-serif;
+}
 
+.orderServiceButton:hover {
+  background-color: #7AC0CF;
+  border-color: #7AC0CF;
+}
+
+.orderServiceButton:focus,
+.orderServiceButton:active {
+  outline: none;
+  border-color: #0A6F8C;
+  background-color: #0A6F8C;
 }

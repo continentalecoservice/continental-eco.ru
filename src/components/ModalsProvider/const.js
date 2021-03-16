@@ -1,10 +1,6 @@
 import { createContext } from "react";
 
-export const ModalContext = createContext({
-  openModal: () => {
-
-  }
-});
+export const ModalContext = createContext();
 
 export const ModalNames = {
 	ORDER_SERVICE : 'orderService',

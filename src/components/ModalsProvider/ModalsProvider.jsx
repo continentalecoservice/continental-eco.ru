@@ -47,6 +47,19 @@ const ModalsProvider = ({ children }) => {
     <>
       <ModalContext.Provider value={providerValue}>
         {children}
+        <Modal
+          center
+          classNames={{
+            modal: styles.contactModalWrapper,
+            modalAnimationIn: styles.customEnterModalAnimation,
+            modalAnimationOut: styles.customLeaveModalAnimation,
+          }}
+          showCloseIcon={false}
+          onClose={handleCloseContactModal}
+          open={modalsState[ModalNames.TO_CONTACT].isOpen}
+        >
+          <ContactModal onCLose={handleCloseContactModal} />
+        </Modal>
       </ModalContext.Provider>
       <Modal
         center
@@ -61,19 +74,6 @@ const ModalsProvider = ({ children }) => {
       >
         <ServiceModal onClose={handleCloseOrderServiceModal}
         />
-      </Modal>
-      <Modal
-        center
-        classNames={{
-          modal: styles.contactModalWrapper,
-          modalAnimationIn: styles.customEnterModalAnimation,
-          modalAnimationOut: styles.customLeaveModalAnimation,
-        }}
-        showCloseIcon={false}
-        onClose={handleCloseContactModal}
-        open={modalsState[ModalNames.TO_CONTACT].isOpen}
-      >
-        <ContactModal onCLose={handleCloseContactModal} />
       </Modal>
     </>
   );

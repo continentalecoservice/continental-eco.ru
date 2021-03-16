@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import className from 'classnames';
 import * as styles from './services.module.css';
 
@@ -8,8 +8,13 @@ import BagSVG from '../../images/svg/bag.svg';
 import { DeratizationContent } from './components/DeratizationContent';
 import { DesinfectionContent } from './components/DesinfectionContent';
 import { DisinsectionContent } from './components/DisinsectionContent';
+import { ModalNames, useModalsContext } from '../ModalsProvider';
 
 export const Services = () => {
+  const { openModal } = useModalsContext();
+
+  const handleOpenModal = useCallback(() => openModal(ModalNames.ORDER_SERVICE), [openModal]);
+
   const [activeItem, setActiveItem] = useState({
     isDesinfection: true,
     isDeratization: false,
@@ -90,13 +95,13 @@ export const Services = () => {
 
       <div className={styles.tabContent}>
         {activeItem.isDesinfection && (
-          <DesinfectionContent />
+          <DesinfectionContent handleOpenModal={handleOpenModal} />
         )}
         {activeItem.isDeratization && (
-          <DeratizationContent />
+          <DeratizationContent handleOpenModal={handleOpenModal} />
         )}
         {activeItem.isDisinsection && (
-          <DisinsectionContent />
+          <DisinsectionContent handleOpenModal={handleOpenModal} />
         )}
       </div>
     </div>

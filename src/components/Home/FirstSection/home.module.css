@@ -43,11 +43,25 @@
   color: #068DAA;
   line-height: 12px;
   padding: 16px 24px;
+  border-radius: 4px;
+  text-decoration: none;
   text-transform: capitalize;
   background-color: #C8E5EB;
   border: 1px solid #C8E5EB;
+  transition: all .3s ease-in;
   font-family: 'Open Sans', sans-serif;
 }
+
+.viewService:hover {
+  border-color: #068DAA;
+  background-color: transparent;
+}
+.viewService:focus,
+.viewService:active {
+  border-color: #068DAA;
+  background-color: #C8E5EB;
+}
+
 
 .videoWrap {
   grid-area: video;

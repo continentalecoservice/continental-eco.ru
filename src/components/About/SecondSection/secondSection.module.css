@@ -6,6 +6,10 @@
   grid-template-columns: repeat(3, minmax(272px, 292px));
 }
 
+.item {
+
+}
+
 .icon {
   width: 64px;
   margin-bottom: 32px;

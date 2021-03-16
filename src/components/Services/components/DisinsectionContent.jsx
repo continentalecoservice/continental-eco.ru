@@ -3,7 +3,7 @@ import ImgPost from '../../../images/postImg.jpg';
 import VirusSVG from '../../../images/svg/virus.svg';
 import * as styles from '../services.module.css';
 
-export const DisinsectionContent = () => {
+export const DisinsectionContent = ({ handleOpenModal }) => {
   return (
     <div className={styles.initialSectionOfContent}>
       <div className={styles.wrapOfFixedSection}>
@@ -20,7 +20,7 @@ export const DisinsectionContent = () => {
           <li className={styles.contentListItem}>Бесплатное повторное проведение процедуры, если результат не был достигнут</li>
           <li className={styles.contentListItem}>Круглосуточный график - заявки принимаються 24/7, включая выходные и праздничные дни</li>
         </ul>
-        <button className={styles.orderService}>заказать услугу</button>
+        <button onClick={handleOpenModal} className={styles.orderService}>заказать услугу</button>
       </div>
 
       <div className={styles.bodyContent}>

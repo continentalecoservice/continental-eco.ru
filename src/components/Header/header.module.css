@@ -37,6 +37,18 @@
   padding: 16px 24px;
   border: 1px solid #068DAA;
   background-color: #068DAA;
+  transition: all .3s ease-in;
+}
+
+.orderService:hover {
+  color: #068DAA;
+  background-color: transparent;
+}
+.orderService:focus,
+.orderService:active {
+  outline: none;
+  color: #FDFDFD;
+  background-color: #0A6F8C;
 }
 
 .buttonContact {

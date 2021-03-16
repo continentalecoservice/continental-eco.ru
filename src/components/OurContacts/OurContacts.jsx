@@ -22,32 +22,32 @@ export const OurContacts = () => {
         <a className={styles.link} href='/'>
           <span className={styles.linkWrap}>
             <InstagramSVG className={styles.linkIcon} />
-            <span className={styles.linkText}>Instagram</span>
           </span>
+          <span className={styles.linkText}>Instagram</span>
         </a>
         <a className={styles.link} href='/'>
           <span className={styles.linkWrap}>
             <FacebookSVG className={styles.linkIcon} />
-            <span className={styles.linkText}>Facebook</span>
           </span>
+          <span className={styles.linkText}>Facebook</span>
         </a>
         <a className={styles.link} href='/'>
           <span className={styles.linkWrap}>
             <WhatsappSVG className={styles.linkIcon} />
-            <span className={styles.linkText}>Whatsapp</span>
           </span>
+          <span className={styles.linkText}>Whatsapp</span>
         </a>
         <a className={styles.link} href='/'>
           <span className={styles.linkWrap}>
             <ViberSVG className={styles.linkIcon} />
-            <span className={styles.linkText}>Viber</span>
           </span>
+          <span className={styles.linkText}>Viber</span>
         </a>
         <a className={styles.link} href='/'>
           <span className={styles.linkWrap}>
             <TelegramSVG className={styles.linkIcon} />
-            <span className={styles.linkText}>Telegram</span>
           </span>
+          <span className={styles.linkText}>Telegram</span>
         </a>
       </div>
       <div className={styles.descriptions}>

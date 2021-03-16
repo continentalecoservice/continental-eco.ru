@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React, { useRef } from 'react';
 import Slider from "react-slick";
 
@@ -40,7 +41,7 @@ export const SliderAboutDesinfection = () => {
               <div>
                 <h2 className={styles.title}>Дезинфекция</h2>
                 <p className={styles.description}>уничтожение бактерий, грибков, вирусов, плесени</p>
-                <a href='/' className={styles.more}>Подробнее</a>
+                <Link to='/services'className={styles.more}>Подробнее</Link>
               </div>
             </div>
           </div>
@@ -52,7 +53,7 @@ export const SliderAboutDesinfection = () => {
               <div>
                 <h2 className={styles.title}>Дезинфекция</h2>
                 <p className={styles.description}>уничтожение бактерий, грибков, вирусов, плесени</p>
-                <a href='/' className={styles.more}>Подробнее</a>
+                <Link to='/services' className={styles.more}>Подробнее</Link>
               </div>
             </div>
           </div>
@@ -61,9 +62,19 @@ export const SliderAboutDesinfection = () => {
       <div className={styles.navigationOfSlider}>
         <button className={styles.navigationButton} onClick={previous}>
           <ArrowLeftSVG />
+          <svg className={styles.arrowIcon} xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <g fill="none" stroke="#2175FF" strokeWidth="1.5" strokeLinejoin="round" strokeMiterlimit="10">
+              <circle className={styles.arrowIconCircle} cx="16" cy="16" r="15.12"></circle>
+            </g>
+          </svg>
         </button>
         <button className={styles.navigationButton} onClick={next}>
           <ArrowRightSVG />
+          <svg className={styles.arrowIcon} xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <g fill="none" stroke="#068dada" strokeWidth="1.5" strokeWidth="round" strokeMiterlimit="10">
+              <circle className={styles.arrowIconCircle} cx="16" cy="16" r="15.12"></circle>
+            </g>
+          </svg>
         </button>
       </div>
     </div>

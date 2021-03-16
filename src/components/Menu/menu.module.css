@@ -76,6 +76,17 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.orderServiceMobile:hover {
+  color: #068DAA;
+  background-color: transparent;
+}
+.orderServiceMobile:focus,
+.orderServiceMobile:active {
+  outline: none;
+  color: #FDFDFD;
+  background-color: #0A6F8C;
+}
+
 .toContactMobile {
   font-size: 12px;
   cursor: pointer;
@@ -88,6 +99,19 @@
   background-color: #C8E5EB;
   border: 1px solid #C8E5EB;
   font-family: 'Open Sans', sans-serif;
+}
+
+.toContactMobile:hover {
+  background-color: transparent;
+  border-color: #068DAA;
+}
+
+.toContactMobile:focus,
+.toContactMobile:active {
+  outline: none;
+  color: #068DAA;
+  border-color: #068DAA;
+  background-color: #C8E5EB;
 }
 
 @media(max-width: 767px) {

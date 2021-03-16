@@ -195,10 +195,23 @@
   border-radius: 4px;
   position: absolute;
   text-transform: capitalize;
+  transition: all .3s ease-in;
   background-color: #C8E5EB;
   border: 1px solid #C8E5EB;
   font-family: 'Open Sans', sans-serif;
 }
+
+.orderService:hover {
+  border-color: #068DAA;
+  background-color: transparent;
+}
+.orderService:focus,
+.orderService:active {
+  outline: none;
+  border-color: #068DAA;
+  background-color: #C8E5EB;
+}
+
 
 .bodyContent {
   padding-top: 92px;

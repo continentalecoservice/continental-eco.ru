@@ -245,13 +245,20 @@
   text-transform: capitalize;
   background-color: #068DAA;
   border: 1px solid #068DAA;
+  transition: all .3s ease-in;
   font-family: 'Open Sans', sans-serif;
+}
+
+#submitButton:hover {
+  background-color: #7AC0CF;
+  border-color: #7AC0CF;
 }
 
 #submitButton:focus,
 #submitButton:active {
   outline: none;
-  box-shadow: 0 0 5px 4px rgb(6 141 170 / 40%);
+  border-color: #0A6F8C;
+  background-color: #0A6F8C;
 }
 
 @media(max-width: 1024px) {
