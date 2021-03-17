@@ -1,5 +1,5 @@
 backend:
-  name: test-repo #github #test-repo
+  name: github #github #test-repo
   branch: master
 
 media_folder: static/assets
