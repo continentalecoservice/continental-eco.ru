@@ -1,0 +1,74 @@
+backend:
+  name: test-repo #github #test-repo
+  branch: master
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: 'homeSlider'
+    label: "Home Slider"
+    folder: 'content/homeSlider'
+    create: true
+    slug: 'index'
+    path: '{{title}}/index'
+    editor:
+      preview: true
+    widget: "list"
+    fields:
+      - label: Items
+        name: items
+        widget: object
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Short Description', name: 'shortDescription', widget: 'text' }
+          - { label: 'Images', name: 'img', widget: 'image' }
+
+  - name: 'trustUs'
+    label: 'Trust us'
+    folder: 'content/trustUs'
+    create: true
+    slug: 'index'
+    path: '{{title}}/index'
+    editor:
+      preview: true
+    widget: "list"
+    fields:
+      - label: Items
+        name: items
+        widget: object
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Images', name: 'img', widget: 'image' }
+
+  - name: 'Info'
+    label: 'info'
+    folder: 'content/generalInfo'
+    create: true
+    slug: 'index'
+    path: '{{title}}/index'
+    editor:
+      preview: true
+    widget: "object"
+    fields:
+      - label: "Address"
+        name: "address"
+        widget: "object"
+        collapsed: false
+        fields:
+          - { label: 'Поддержка', name: 'support', widget: 'text', default: '+7 (495) 227-56-56' }
+          - { label: 'Почта', name: 'email', widget: 'text', default: 'ecoservice@gmail.com' }
+          - { label: 'Адрес', name: 'address', widget: 'text', default: 'Москва, ул. Нижегородская, 29-33' }
+          - { label: 'Время работи', name: 'workTime', widget: 'text', default: '9:00 - 17:00' }
+          - { label: 'Главни телефон', name: 'generalPhone', widget: 'text', default: '+7495 755 69 83' }
+
+      - label: "Social links"
+        name: "links"
+        widget: "object"
+        collapsed: false
+        fields:
+          - { label: 'facebook link', name: 'facebook', widget: 'string' }
+          - { label: 'instagram link', name: 'instagram', widget: 'string' }
+          - { label: 'whatsapp link', name: 'whatsapp', widget: 'string' }
+          - { label: 'viber link', name: 'viber', widget: 'string' }
+          - { label: 'telegram link', name: 'telegram', widget: 'string' }
