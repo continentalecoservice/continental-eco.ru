@@ -19,13 +19,20 @@ const FirstSection = () => {
       </div>
       <SliderAboutDesinfection />
       <div className={styles.videoWrap}>
+
         <video
           loop
+          muted
           autoPlay
+          autobuffer="true"
           src={VideoOfSection}
           poster={ImgOfSection}
           className={styles.imgOfSection}
-        />
+        >
+          Sorry, your browser doesn't support embedded videos,
+          but don't worry, you can <a href={VideoOfSection}>download it</a>
+          and watch it with your favorite video player!
+        </video>
       </div>
     </div>
   );

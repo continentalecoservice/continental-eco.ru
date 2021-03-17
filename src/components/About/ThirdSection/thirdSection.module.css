@@ -17,6 +17,10 @@
   color: #068DAA;
 }
 
+.img {
+  max-width: 100%;
+}
+
 .description {
   font-size: 16px;
   font-weight: 300;

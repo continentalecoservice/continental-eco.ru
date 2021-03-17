@@ -1,0 +1,79 @@
+#preloader-container {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background-color: #F2F2F2;
+}
+
+#preloader {
+  width: 168px;
+  height: 168px;
+  padding: 10px;
+  position: relative;
+}
+
+#preloader::after {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
+  content: '';
+  margin: auto;
+  width: 148px;
+  height: 148px;
+  position: absolute;
+  border-radius: 100%;
+  background-color: #C8E5EB;
+  transform: translate(100%, 100%);
+  transition: transform 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+#preloader.load::after {
+  opacity: 1;
+  transform: translate(10px, 10px);
+}
+
+#preloader.load .circle {
+  display: none;
+}
+
+.preloader-wrap {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  border-radius: 50%;
+  transform: rotate(360deg);
+  transform-origin: center;
+  animation: spin-right 5s linear infinite;
+}
+
+.circle {
+  content: '';
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  border-radius: 100%;
+  background-color: #C8E5EB;
+}
+
+.svg-icon {
+  z-index: 23;
+  position: relative;
+}
+
+@keyframes spin-right {
+  100% {
+    transform: rotate(0deg);
+  }
+}

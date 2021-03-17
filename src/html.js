@@ -1,4 +1,7 @@
 import React from 'react';
+import PreloaderSVG from './images/svg/preloader.svg';
+
+import './preloader.css';
 
 const HTML = (props) => {
   return (
@@ -30,6 +33,14 @@ const HTML = (props) => {
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
         <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: props.body }} />
+        <div key={`preloader`} id="preloader-container">
+          <div id='preloader'>
+            <div className='preloader-wrap'>
+              <div className='circle'></div>
+            </div>
+            <PreloaderSVG className='svg-icon' />
+          </div>
+        </div>
         {props.postBodyComponents}
       </body>
     </html>
