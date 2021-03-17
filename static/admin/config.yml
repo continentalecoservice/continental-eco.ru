@@ -1,6 +1,8 @@
 backend:
   name: github #github #test-repo
   branch: master
+  repo: continentalecoservice/continental-eco.ru # Path to your GitHub repository
+
 
 media_folder: static/assets
 public_folder: /assets
