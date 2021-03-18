@@ -41,9 +41,9 @@ collections:
         fields:
           - { label: 'Item', name: 'item', widget: 'string', default: "Обработка поверхностей дезинфицирующим раствором" }
 
-  - name: 'info'
-    label: 'Info'
-    folder: 'content/info'
+  - name: 'pageInfo'
+    label: 'PageInfo'
+    folder: 'content/pageInfo'
     create: true
     slug: 'index'
     path: '{{title}}/index'
