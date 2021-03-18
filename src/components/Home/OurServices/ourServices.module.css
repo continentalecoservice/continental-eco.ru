@@ -43,9 +43,9 @@
   border-radius: 4px;
   padding-left: 40px;
   padding-right: 63px;
+  text-decoration: none;
   flex-direction: column;
   justify-content: center;
-  /* border: 1px solid #C8E5EB; */
 }
 
 .item:hover::before {
@@ -137,7 +137,6 @@
   font-weight: 600;
   line-height: 20px;
   align-items: center;
-  text-decoration: none;
   transition: all 0.3s ease-in;
   font-family: 'Open Sans', sans-serif;
 }

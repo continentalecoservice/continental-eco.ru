@@ -6,8 +6,14 @@ import { SliderAboutDesinfection } from './slider';
 
 import * as styles from './home.module.css';
 import { Link } from 'gatsby';
+import { ServiceNames } from '../../Services/const';
+import { useServicesContext } from '../../Services/hooks/useServicesContext';
 
 const FirstSection = () => {
+  const {  handleSectActiveSection } = useServicesContext();
+
+  const handleSetActiveDesinfectionTab = () => handleSectActiveSection(ServiceNames.Desinfection);
+
   return (
     <div className={styles.firstSection}>
       <div className={styles.titleAndDescription}>
@@ -15,11 +21,10 @@ const FirstSection = () => {
         <p className={styles.description}>Компания Континентал Экосервис занимается дератизацией, дезинсекцией
         (уничтожение тараканов и иных насекомых, крыс, мышей), дезинфекцией помещений
              (уничтожение бактерий, грибков, вирусов, плесени).</p>
-        <Link to='/services' className={styles.viewService}>Просмотреть услуги</Link>
+        <Link to='/services' onClick={handleSetActiveDesinfectionTab} className={styles.viewService}>Просмотреть услуги</Link>
       </div>
       <SliderAboutDesinfection />
       <div className={styles.videoWrap}>
-
         <video
           loop
           muted

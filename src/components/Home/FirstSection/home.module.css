@@ -1,7 +1,7 @@
 .firstSection {
   padding: 56px 0;
   position: relative;
-  height: calc(100vh - 95px);
+  min-height: calc(100vh - 95px);
   background: url('../../../images/iconHome.png') #FDFDFD no-repeat 0 -80px;
 
   display: grid;

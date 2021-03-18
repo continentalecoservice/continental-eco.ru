@@ -5,11 +5,18 @@ import Slider from "react-slick";
 import Img1 from '../../../../images/slider/img1.jpg';
 import ArrowLeftSVG from '../../../../images/svg/arrowLeft.svg';
 import ArrowRightSVG from '../../../../images/svg/arrowRight.svg';
+import { ServiceNames } from '../../../Services/const';
+import { useServicesContext } from '../../../Services/hooks/useServicesContext';
 
 import * as styles from './sliderAboutDesinfection.module.css';
 
 export const SliderAboutDesinfection = () => {
   const customSlider = useRef({});
+  const {  handleSectActiveSection } = useServicesContext();
+
+  const handleSetActiveDesinfectionTab = () => handleSectActiveSection(ServiceNames.Desinfection);
+  const handleSetActiveDeratizationTab = () => handleSectActiveSection(ServiceNames.Deratization);
+  const handleSetActiveDisinsectionTab = () => handleSectActiveSection(ServiceNames.Disinsection);
 
   const settings = {
     speed: 500,
@@ -41,7 +48,7 @@ export const SliderAboutDesinfection = () => {
               <div>
                 <h2 className={styles.title}>Дезинфекция</h2>
                 <p className={styles.description}>уничтожение бактерий, грибков, вирусов, плесени</p>
-                <Link to='/services'className={styles.more}>Подробнее</Link>
+                <Link onClick={handleSetActiveDesinfectionTab} to='/services'className={styles.more}>Подробнее</Link>
               </div>
             </div>
           </div>
@@ -51,9 +58,21 @@ export const SliderAboutDesinfection = () => {
                 <img className={styles.img} src={Img1} alt='img alt'/>
               </div>
               <div>
-                <h2 className={styles.title}>Дезинфекция</h2>
+                <h2 className={styles.title}>Дератизация</h2>
                 <p className={styles.description}>уничтожение бактерий, грибков, вирусов, плесени</p>
-                <Link to='/services' className={styles.more}>Подробнее</Link>
+                <Link onClick={handleSetActiveDeratizationTab} to='/services' className={styles.more}>Подробнее</Link>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className={styles.item}>
+              <div className={styles.imgWrap}>
+                <img className={styles.img} src={Img1} alt='img alt'/>
+              </div>
+              <div>
+                <h2 className={styles.title}>Дезинсекция</h2>
+                <p className={styles.description}>уничтожение бактерий, грибков, вирусов, плесени</p>
+                <Link onClick={handleSetActiveDisinsectionTab} to='/services' className={styles.more}>Подробнее</Link>
               </div>
             </div>
           </div>
