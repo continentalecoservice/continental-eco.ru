@@ -1,5 +1,5 @@
 backend:
-  name: github #github #test-repo
+  name: test-repo #github #test-repo
   branch: master
   repo: continentalecoservice/continental-eco.ru # Path to your GitHub repository
 
@@ -31,3 +31,13 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Preview Image', name: 'cover', widget: 'image' }
+      - { label: 'Icon', name: 'icon', widget: 'image' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+      - label: "Testimonials"
+        name: "testimonials"
+        collapsed: false
+        widget: "list"
+        fields:
+          - { label: Quote, name: quote, widget: string, default: "Everything is awesome!" }
+          - { label: Author, name: author, widget: string }
