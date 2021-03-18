@@ -1,5 +1,5 @@
 backend:
-  name: test-repo #github #test-repo
+  name: github #github #test-repo
   branch: master
   repo: continentalecoservice/continental-eco.ru # Path to your GitHub repository
 
@@ -34,10 +34,9 @@ collections:
       - { label: 'Icon', name: 'icon', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
-      - label: "Testimonials"
-        name: "testimonials"
+      - label: "ContentList"
+        name: "contentList"
         collapsed: false
         widget: "list"
         fields:
-          - { label: Quote, name: quote, widget: string, default: "Everything is awesome!" }
-          - { label: Author, name: author, widget: string }
+          - { label: 'Item', name: 'item', widget: 'string', default: "Обработка поверхностей дезинфицирующим раствором" }
