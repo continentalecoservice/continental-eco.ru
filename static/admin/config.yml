@@ -40,3 +40,29 @@ collections:
         widget: "list"
         fields:
           - { label: 'Item', name: 'item', widget: 'string', default: "Обработка поверхностей дезинфицирующим раствором" }
+
+  - name: 'info'
+    label: 'Info'
+    folder: 'content/info'
+    create: true
+    slug: 'index'
+    path: '{{title}}/index'
+    editor:
+      preview: true
+    fields:
+        - { label: 'Поддержка', name: 'support', widget: 'text', default: '+7 (495) 227-56-56' }
+        - { label: 'Почта', name: 'email', widget: 'text', default: 'ecoservice@gmail.com' }
+        - { label: 'Адрес', name: 'address', widget: 'text', default: 'Москва, ул. Нижегородская, 29-33' }
+        - { label: 'Время работи', name: 'workTime', widget: 'text', default: '9:00 - 17:00' }
+        - { label: 'Главни телефон', name: 'generalPhone', widget: 'text', default: '+7495 755 69 83' }
+
+      - label: "SocialLinks"
+        name: "socialLinks"
+        collapsed: false
+        widget: "object"
+        fields:
+          - { label: 'facebook link', name: 'facebook', widget: 'string' }
+          - { label: 'instagram link', name: 'instagram', widget: 'string' }
+          - { label: 'whatsapp link', name: 'whatsapp', widget: 'string' }
+          - { label: 'viber link', name: 'viber', widget: 'string' }
+          - { label: 'telegram link', name: 'telegram', widget: 'string' }
