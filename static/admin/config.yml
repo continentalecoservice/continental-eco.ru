@@ -43,14 +43,8 @@ collections:
       - { label: 'Address', name: 'address', widget: 'text', default: 'Москва, ул. Нижегородская, 29-33' }
       - { label: 'WorkTime', name: 'workTime', widget: 'text', default: '9:00 - 17:00' }
       - { label: 'General Phone', name: 'generalPhone', widget: 'text', default: '+7495 755 69 83' }
-
-      - label: "SocialLinks"
-        name: "socialLinks"
-        collapsed: false
-        widget: "object"
-        fields:
-          - { label: 'Facebook', name: 'facebook', widget: 'string' }
-          - { label: 'Instagram', name: 'instagram', widget: 'string' }
-          - { label: 'Whatsapp', name: 'whatsapp', widget: 'string' }
-          - { label: 'Viber', name: 'viber', widget: 'string' }
-          - { label: 'Telegram', name: 'telegram', widget: 'string' }
+      - { label: 'Facebook', name: 'facebook', widget: 'string', default: 'https://facebook.com/' }
+      - { label: 'Instagram', name: 'instagram', widget: 'string', default: 'https://instagram.com/' }
+      - { label: 'Whatsapp', name: 'whatsapp', widget: 'string', default: 'https://whatsapp.com/' }
+      - { label: 'Viber', name: 'viber', widget: 'string', default: 'https://viber.com/' }
+      - { label: 'Telegram', name: 'telegram', widget: 'string', default: 'https://telegram.com/' }
