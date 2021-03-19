@@ -25,24 +25,12 @@ export const ServiceModal = (
 ) => {
   const { addToast } = useToasts();
 
-  const [formValues, setFormValues] = useState({
-    disinfection: '',
-    deratization: '',
-    disinsection: '',
-    otherServices: '',
-    name: '',
-    surname: '',
-    email: '',
-    tel: '',
-    typeOfPlace: '',
-    widthOfPlace: '',
-    descriptionOfProblem: ''
-  });
+  const [formValues, setFormValues] = useState({});
 
-  const setValue = ( nameOfField, event ) => {
+  const setValue = (event) => {
     setFormValues({
       ...formValues,
-      [nameOfField]: event?.target?.value
+      [event.target.name]: event.target.value
     });
   }
 
@@ -58,23 +46,23 @@ export const ServiceModal = (
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "orderService", ...formValues })
+      body: encode({ "form-name": "service", ...formValues })
     })
-    .then(() => {
-      console.log("Form submission success");
-      addToast('Форма успешно отправлена.', {
-        appearance: 'success',
-        autoDismiss: true
+      .then(() => {
+        console.log("Form submission success");
+        addToast('Форма успешно отправлена.', {
+          appearance: 'success',
+          autoDismiss: true
+        });
+        onClose();
+      })
+      .catch(error => {
+        addToast(error, {
+          appearance: 'error',
+          autoDismiss: true
+        });
+        console.error("Form submission error:", error);
       });
-      onClose();
-    })
-    .catch(error => {
-      addToast(error, {
-        appearance: 'error',
-        autoDismiss: true
-      });
-      console.error("Form submission error:", error);
-    });
   }
 
   const nameClasses = classNames(
@@ -143,7 +131,7 @@ export const ServiceModal = (
                 id='disinfection'
                 name='disinfection'
                 className={styles.checkbox}
-                onChange={(value) => setValue('disinfection', value)}
+                onChange={setValue}
               />
               <label className={styles.label} htmlFor='disinfection'>Дезинфекция</label>
               <IconSVG1 className={styles.svgIcon} />
@@ -154,7 +142,7 @@ export const ServiceModal = (
                 id='deratization'
                 name='deratization'
                 className={styles.checkbox}
-                onChange={(value) => setValue('deratization', value)}
+                onChange={setValue}
               />
               <label className={styles.label} htmlFor='deratization'>Дератизация</label>
               <IconSVG2 className={styles.svgIcon} />
@@ -165,7 +153,7 @@ export const ServiceModal = (
                 id={'disinsection'}
                 name='disinsection'
                 className={styles.checkbox}
-                onChange={(value) => setValue('disinsection', value)}
+                onChange={setValue}
               />
               <label className={styles.label} htmlFor='disinsection'>Дезинсекция</label>
               <IconSVG3 className={styles.svgIcon} />
@@ -176,7 +164,7 @@ export const ServiceModal = (
                 id='otherServices'
                 name='otherServices'
                 className={styles.checkbox}
-                onChange={(value) => setValue('otherServices', value)}
+                onChange={setValue}
               />
               <label className={styles.label} htmlFor='otherServices'>Другие услуги</label>
             </div>
@@ -191,7 +179,7 @@ export const ServiceModal = (
                 autoComplete='off'
                 aria-required="true"
                 className={nameClasses}
-                onChange={(value) => setValue('name', value)}
+                onChange={setValue}
 
               />
               <label className={`${styles.label} ${styles.isRequired}`} htmlFor='nameField'>Имя</label>
@@ -203,7 +191,7 @@ export const ServiceModal = (
                 id='surnameField'
                 autoComplete='off'
                 className={surnameClasses}
-                onChange={(value) => setValue('surname', value)}
+                onChange={setValue}
               />
               <label className={styles.label} htmlFor='surnameField'>Фамилия</label>
             </div>
@@ -216,7 +204,7 @@ export const ServiceModal = (
                 autoComplete='off'
                 aria-required="true"
                 className={emailClasses}
-                onChange={(value) => setValue('email', value)}
+                onChange={setValue}
               />
               <label className={`${styles.label} ${styles.isRequired}`} htmlFor='emailField'>Email</label>
             </div>
@@ -229,7 +217,7 @@ export const ServiceModal = (
                 autoComplete='off'
                 aria-required="true"
                 className={telClasses}
-                onChange={(value) => setValue('tel', value)}
+                onChange={setValue}
               />
               <label className={`${styles.label} ${styles.isRequired}`} htmlFor='telField'>Телефон</label>
             </div>
@@ -242,7 +230,7 @@ export const ServiceModal = (
                 aria-required="true"
                 id='typeOfPlaceField'
                 className={typeOfPlaceClasses}
-                onChange={(value) => setValue('typeOfPlace', value)}
+                onChange={setValue}
               />
               <label className={`${styles.label} ${styles.isRequired}`} htmlFor='typeOfPlaceField'>Тип помещения</label>
             </div>
@@ -255,7 +243,7 @@ export const ServiceModal = (
                 aria-required="true"
                 id='widthOfPlaceField'
                 className={widthOfPlaceClasses}
-                onChange={(value) => setValue('widthOfPlace', value)}
+                onChange={setValue}
               />
               <label className={`${styles.label} ${styles.isRequired}`} htmlFor='widthOfPlaceField'>Размер помещения в м²</label>
             </div>
@@ -266,7 +254,7 @@ export const ServiceModal = (
                 name='descriptionOfProblem'
                 id='descriptionOfProblemField'
                 className={descriptionOfProblemClasses}
-                onChange={(value) => setValue('descriptionOfProblem', value)}
+                onChange={setValue}
               />
               <label className={styles.label} htmlFor='descriptionOfProblemField'>Описание проблемы</label>
             </div>
