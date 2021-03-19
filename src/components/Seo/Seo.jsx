@@ -3,18 +3,16 @@ import Helmet from "react-helmet";
 
 import config from "../../../content/meta/config";
 
-const Seo = (
+export const Seo = (
   {
     postTitle,
     postDescription,
     postCover,
-    postSlug
   }
 ) => {
-  const title = postTitle ? `${postTitle} - ${config.shortSiteTitle}` : config.siteTitle;
+  const title = postTitle ? postTitle : config.siteTitle;
   const description = postDescription ? postDescription : config.siteDescription;
   const image = postCover ? postCover : config.siteImage;
-  const url = config.siteUrl + config.pathPrefix + postSlug;
 
   return (
     <Helmet
@@ -27,7 +25,7 @@ const Seo = (
       <title>{title}</title>
       <meta name="description" content={description} />
       {/* OpenGraph tags */}
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content={config.siteUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={config.siteUrl + image} />
@@ -37,5 +35,3 @@ const Seo = (
     </Helmet>
   );
 };
-
-export { Seo };

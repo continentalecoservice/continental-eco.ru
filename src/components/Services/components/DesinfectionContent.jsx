@@ -1,10 +1,12 @@
 import React from 'react';
 import VirusSVG from '../../../images/svg/virus.svg';
+import { Seo } from '../../Seo';
 import * as styles from '../services.module.css';
 
 export const DesinfectionContent = ({ handleOpenModal }) => {
   return (
     <div className={styles.initialSectionOfContent}>
+      <Seo postTitle="Дезинфекция - вашего помещения" />
       <div className={styles.wrapOfFixedSection}>
         <div className={styles.headeOfTabContent}>
           <div className={styles.titleAndDescription}>

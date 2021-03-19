@@ -123,6 +123,7 @@ export const ServiceModal = (
       <div className={styles.serviceModalContentWrap}>
         <h1 className={styles.title}>Выберете услугу и опишите проблему:</h1>
         <form
+          netlify="true"
           method="post"
           name="service"
           data-netlify="true"

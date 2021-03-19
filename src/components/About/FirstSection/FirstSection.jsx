@@ -2,12 +2,15 @@ import React from 'react';
 import Img1 from '../../../images/about/img1.jpg';
 import Img2 from '../../../images/about/img2.jpg';
 import Img3 from '../../../images/about/img3.jpg';
+import { Seo } from '../../Seo';
 
 import * as styles from './firstSection.module.css';
 
 export const FirstSection = () => {
   return (
     <div className={styles.firstSection}>
+      <Seo postTitle="О нас - вашего помещения" postDescription="Компания Continental Ecoservice уже
+          более 5ти лет успешно предоставляет услуги по уничтожению всех видов вредных насекомых и грызунов." />
       <div className={styles.firstSectionWrap}>
         <div className={styles.descriptionWrap}>
           <h1 className={styles.title}><span>О</span> Нас</h1>

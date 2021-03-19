@@ -8,14 +8,16 @@ import * as styles from './home.module.css';
 import { Link } from 'gatsby';
 import { ServiceNames } from '../../Services/const';
 import { useServicesContext } from '../../Services/hooks/useServicesContext';
+import { Seo } from '../../Seo';
 
 const FirstSection = () => {
-  const {  handleSectActiveSection } = useServicesContext();
+  const { handleSectActiveSection } = useServicesContext();
 
   const handleSetActiveDesinfectionTab = () => handleSectActiveSection(ServiceNames.Desinfection);
 
   return (
     <div className={styles.firstSection}>
+      <Seo postTitle="Дезинфекция - вашего помещения" />
       <div className={styles.titleAndDescription}>
         <h1 className={styles.title}><span>Дез</span>инфекция вашего помещения</h1>
         <p className={styles.description}>Компания Континентал Экосервис занимается дератизацией, дезинсекцией

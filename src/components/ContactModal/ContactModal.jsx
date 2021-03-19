@@ -11,6 +11,7 @@ import ChevronSVG from '../../images/svg/Pull-Up-Chevron.svg';
 
 import * as styles from './contactModal.module.css';
 import { socialLinks, supportPhone } from '../../../content/meta/config';
+import { Seo } from '../Seo';
 
 export const ContactModal = (
   {
@@ -25,6 +26,7 @@ export const ContactModal = (
 
   return (
     <div className={styles.ContactModal}>
+      <Seo postTitle='Контакти' />
       <button className={styles.buttonClose} onClick={onCLose} >
         <ChevronSVG />
       </button>
