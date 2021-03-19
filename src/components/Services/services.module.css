@@ -238,6 +238,14 @@
   font-family: 'Roboto Slab', serif;
 }
 
+.bodyContent h4 {
+  font-size: 24px;
+  color: #242424;
+  line-height: 26px;
+  margin-bottom: 32px;
+  font-family: 'Roboto Slab', serif;
+}
+
 .bodyContent img {
   max-width: 100%;
   display: block;
@@ -245,16 +253,18 @@
 }
 
 .bodyContent ul {
-  list-style: none;
+  list-style-type: "-";
+  margin-bottom: 32px;
 }
 
 .bodyContent li {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
   color: #242424;
   line-height: 24px;
   font-style: normal;
   margin-bottom: 12px;
+  padding-left: 5px;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -271,6 +281,10 @@
 @media(max-width: 1220px) {
   .services {
     grid-gap: 0;
+  }
+
+  .item {
+    margin-bottom: 8vh;
   }
 }
 

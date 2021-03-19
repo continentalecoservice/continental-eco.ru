@@ -8,6 +8,7 @@ import { useModalsContext } from '../ModalsProvider/useModalsContext';
 import * as styles from './header.module.css';
 
 import LogoSVG from '../../images/svg/logo.svg';
+import { supportPhone } from '../../../content/meta/config';
 
 const Header = () => {
   const { openModal } = useModalsContext();
@@ -41,7 +42,7 @@ const Header = () => {
             : (
               <>
                 <Menu />
-                <a className={styles.mobile} href='tel:+7495 755 69 83'>+7495 755 69 83</a>
+                <a className={styles.mobile} href={`tel:${supportPhone}`}>{supportPhone}</a>
                 <button className={styles.orderService} onClick={handleOpenOrderServiceModal}>Заказать услугу</button>
               </>
             )

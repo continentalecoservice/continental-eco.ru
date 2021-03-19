@@ -11,8 +11,8 @@ export const FirstSection = () => {
       <div className={styles.firstSectionWrap}>
         <div className={styles.descriptionWrap}>
           <h1 className={styles.title}><span>О</span> Нас</h1>
-          <p className={styles.description}>Компания Continental Ecoservice уже более 5-ти лет успешно
-            предоставляет услуги по уничтожению всех видов вредных насекомых и грызунов. </p>
+          <p className={styles.description}>Компания Continental Ecoservice уже
+          более 5ти лет успешно предоставляет услуги по уничтожению всех видов вредных насекомых и грызунов.</p>
         </div>
         <div className={styles.galery}>
           <img src={Img1} alt='img' className={styles.smallImg} />

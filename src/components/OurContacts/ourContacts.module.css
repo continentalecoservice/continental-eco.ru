@@ -117,7 +117,7 @@
 }
 
 .descriptions {
-  padding-top: 90px;
+  padding: 90px 0;
 }
 
 .title {
@@ -156,6 +156,14 @@
   font-weight: 300;
   color: #242424;
   line-height: 32px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.smallDescription {
+  font-size: 16px;
+  font-weight: 300;
+  color: #242424;
+  line-height: 1.2;
   font-family: 'Open Sans', sans-serif;
 }
 

@@ -10,6 +10,7 @@ import MessengerSVG from '../../images/svg/messenger.svg';
 import ChevronSVG from '../../images/svg/Pull-Up-Chevron.svg';
 
 import * as styles from './contactModal.module.css';
+import { socialLinks, supportPhone } from '../../../content/meta/config';
 
 export const ContactModal = (
   {
@@ -30,35 +31,35 @@ export const ContactModal = (
       <ul className={styles.contactsList}>
         <li className={styles.contactItem}>
           <a
-            href='tel:+74957556983'
+            href={`tel:${supportPhone}`}
             className={styles.contactLink}
           >
-            <PhoneSVG className={styles.icon} />+7495 755 69 83</a>
+            <PhoneSVG className={styles.icon} />{supportPhone}</a>
         </li>
         <li className={styles.contactItem}>
           <a
-            href='tel:+74957556983'
+            href={`tel:${socialLinks.viber}`}
             className={styles.contactLink}
           >
             <ViberSVG className={styles.icon} />Viber</a>
         </li>
         <li className={styles.contactItem}>
           <a
-            href='tel:+74957556983'
+            href={`tel:${socialLinks.whatsApp}`}
             className={styles.contactLink}
           >
             <WhatsappSVG className={styles.icon} />WhatsApp</a>
         </li>
         <li className={styles.contactItem}>
           <a
-            href='tel:+74957556983'
+            href={`tel:${socialLinks.facebook}`}
             className={styles.contactLink}
           >
             <MessengerSVG className={styles.icon} />Messanger</a>
         </li>
         <li className={styles.contactItem}>
           <a
-            href='tel:+74957556983'
+            href={`tel:${socialLinks.telegram}`}
             className={styles.contactLink}
           >
             <TelegramSVG className={styles.icon} />Telegram</a>

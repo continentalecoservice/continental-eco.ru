@@ -19,4 +19,22 @@ module.exports = {
   manifestThemeColor: "#666",
   manifestDisplay: "standalone",
   gravatarImgMd5: "",
+
+  supportPhone: '+792 615 89 770',
+  supportEmail: 'continentalecoservice@gmail.com',
+  workTime: '24/7',
+  address: 'Москва, ул. Нижегородская, 29-33',
+  registratioInformation: {
+    name: 'ИП Подольская-Коган М.С.',
+    number: 'ОГРНИП: 315774600327780',
+    dateOfRegistery: '30.09.2015',
+    registrationAuthority: 'МиФНС №46 по г.Москве.'
+  },
+  socialLinks: {
+    instagram: 'https://www.instagram.com/continental_ecoservice/',
+    facebook: 'https://www.facebook.com/continentalecoservice',
+    whatsApp: '',
+    viber: '',
+    telegram: '',
+  }
 }
