@@ -120,6 +120,7 @@ export const ServiceModal = (
       <div className={styles.serviceModalContentWrap}>
         <h1 className={styles.title}>Выберете услугу и опишите проблему:</h1>
         <form
+          name="service"
           data-netlify="true"
           onSubmit={handleSubmit}
           data-netlify-honeypot="bot-field"
