@@ -18,6 +18,12 @@ import * as styles from './serviceModal.module.css';
 //   return error;
 // }
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 export const ServiceModal = (
   {
     onClose
@@ -34,19 +40,16 @@ export const ServiceModal = (
     });
   }
 
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-  }
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    const form = e.target
     fetch("/", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "service", ...formValues })
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...formValues
+      })
     })
       .then(() => {
         console.log("Form submission success");
@@ -120,11 +123,13 @@ export const ServiceModal = (
       <div className={styles.serviceModalContentWrap}>
         <h1 className={styles.title}>Выберете услугу и опишите проблему:</h1>
         <form
+          method="post"
           name="service"
           data-netlify="true"
           onSubmit={handleSubmit}
           data-netlify-honeypot="bot-field"
         >
+          <input type="hidden" name="form-name" value="service" />
           <div className={styles.typesOfService}>
             <div className={styles.checkboxWrap}>
               <input
@@ -183,7 +188,9 @@ export const ServiceModal = (
                 onChange={setValue}
 
               />
-              <label className={`${styles.label} ${styles.isRequired}`} htmlFor='nameField'>Имя</label>
+              <label
+                className={`${styles.label} ${styles.isRequired}`}
+                htmlFor='nameField'>Имя</label>
             </div>
             <div className={styles.inputWrap} id={styles.surname}>
               <input
@@ -207,7 +214,9 @@ export const ServiceModal = (
                 className={emailClasses}
                 onChange={setValue}
               />
-              <label className={`${styles.label} ${styles.isRequired}`} htmlFor='emailField'>Email</label>
+              <label
+                className={`${styles.label} ${styles.isRequired}`}
+                htmlFor='emailField'>Email</label>
             </div>
             <div className={styles.inputWrap} id={styles.tel}>
               <input
@@ -220,7 +229,9 @@ export const ServiceModal = (
                 className={telClasses}
                 onChange={setValue}
               />
-              <label className={`${styles.label} ${styles.isRequired}`} htmlFor='telField'>Телефон</label>
+              <label
+                className={`${styles.label} ${styles.isRequired}`}
+                htmlFor='telField'>Телефон</label>
             </div>
             <div className={styles.inputWrap} id={styles.typeOfPlace}>
               <input
@@ -233,7 +244,9 @@ export const ServiceModal = (
                 className={typeOfPlaceClasses}
                 onChange={setValue}
               />
-              <label className={`${styles.label} ${styles.isRequired}`} htmlFor='typeOfPlaceField'>Тип помещения</label>
+              <label
+                className={`${styles.label} ${styles.isRequired}`}
+                htmlFor='typeOfPlaceField'>Тип помещения</label>
             </div>
             <div className={styles.inputWrap} id={styles.widthOfPlace}>
               <input
@@ -246,7 +259,9 @@ export const ServiceModal = (
                 className={widthOfPlaceClasses}
                 onChange={setValue}
               />
-              <label className={`${styles.label} ${styles.isRequired}`} htmlFor='widthOfPlaceField'>Размер помещения в м²</label>
+              <label
+                className={`${styles.label} ${styles.isRequired}`}
+                htmlFor='widthOfPlaceField'>Размер помещения в м²</label>
             </div>
             <div className={styles.inputWrap} id={styles.descriptionOfProblem}>
               <textarea
@@ -257,9 +272,14 @@ export const ServiceModal = (
                 className={descriptionOfProblemClasses}
                 onChange={setValue}
               />
-              <label className={styles.label} htmlFor='descriptionOfProblemField'>Описание проблемы</label>
+              <label
+                className={styles.label}
+                htmlFor='descriptionOfProblemField'>Описание проблемы</label>
             </div>
-            <button type='submit' id={styles.submitButton} className={styles.submitButton}>Отправить заявку</button>
+            <button
+              type='submit'
+              id={styles.submitButton}
+              className={styles.submitButton}>Отправить заявку</button>
           </div>
         </form>
       </div>
