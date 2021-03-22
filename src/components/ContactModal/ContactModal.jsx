@@ -5,7 +5,6 @@ import { useModalsContext } from '../ModalsProvider/useModalsContext';
 import PhoneSVG from '../../images/svg/phone.svg';
 import ViberSVG from '../../images/svg/viber.svg';
 import WhatsappSVG from '../../images/svg/wa.svg';
-import TelegramSVG from '../../images/svg/telegram.svg';
 import MessengerSVG from '../../images/svg/messenger.svg';
 import ChevronSVG from '../../images/svg/Pull-Up-Chevron.svg';
 
@@ -33,6 +32,8 @@ export const ContactModal = (
       <ul className={styles.contactsList}>
         <li className={styles.contactItem}>
           <a
+            target='_blank'
+            rel="noreferrer"
             href={`tel:${supportPhone}`}
             className={styles.contactLink}
           >
@@ -40,31 +41,30 @@ export const ContactModal = (
         </li>
         <li className={styles.contactItem}>
           <a
-            href={`tel:${socialLinks.viber}`}
+            target='_blank'
+            rel="noreferrer"
+            href={socialLinks.viber}
             className={styles.contactLink}
           >
             <ViberSVG className={styles.icon} />Viber</a>
         </li>
         <li className={styles.contactItem}>
           <a
-            href={`tel:${socialLinks.whatsApp}`}
+            target='_blank'
+            rel="noreferrer"
+            href={socialLinks.whatsApp}
             className={styles.contactLink}
           >
             <WhatsappSVG className={styles.icon} />WhatsApp</a>
         </li>
         <li className={styles.contactItem}>
           <a
+            target='_blank'
+            rel="noreferrer"
             href={`tel:${socialLinks.facebook}`}
             className={styles.contactLink}
           >
             <MessengerSVG className={styles.icon} />Messanger</a>
-        </li>
-        <li className={styles.contactItem}>
-          <a
-            href={`tel:${socialLinks.telegram}`}
-            className={styles.contactLink}
-          >
-            <TelegramSVG className={styles.icon} />Telegram</a>
         </li>
       </ul>
       <button

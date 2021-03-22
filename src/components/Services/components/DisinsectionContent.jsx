@@ -1,5 +1,5 @@
 import React from 'react';
-import VirusSVG from '../../../images/svg/virus.svg';
+import BagSVG from '../../../images/svg/bag.svg';
 import { Seo } from '../../Seo';
 import * as styles from '../services.module.css';
 
@@ -11,13 +11,12 @@ export const DisinsectionContent = ({ handleOpenModal }) => {
         <div className={styles.headeOfTabContent}>
           <div className={styles.titleAndDescription}>
             <h1 className={styles.contentTitle}>Дезинсекция</h1>
-            <p className={styles.contentDescription}>уничтожение бактерий, грибков, вирусов, плесени</p>
+            <p className={styles.contentDescription}>уничтожение различных видов насекомых, являющихся вредителями</p>
           </div>
-          <VirusSVG className={styles.contentIcon} />
+          <BagSVG className={styles.contentIcon} />
         </div>
         <ul className={styles.contentList}>
-          <li className={styles.contentListItem}>Обработка поверхностей дезинфицирующим раствором</li>
-          <li className={styles.contentListItem}>Использование ультрафиолетового бактерицидного излучения для обеззараживание воздуха </li>
+          <li className={styles.contentListItem}>Использование химических препаратов III-IV класса опасности.</li>
           <li className={styles.contentListItem}>Бесплатное повторное проведение процедуры, если результат не был достигнут</li>
           <li className={styles.contentListItem}>Круглосуточный график - заявки принимаються 24/7, включая выходные и праздничные дни</li>
         </ul>

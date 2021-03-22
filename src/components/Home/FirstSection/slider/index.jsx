@@ -59,7 +59,7 @@ export const SliderAboutDesinfection = () => {
               </div>
               <div>
                 <h2 className={styles.title}>Дератизация</h2>
-                <p className={styles.description}>уничтожение бактерий, грибков, вирусов, плесени</p>
+                <p className={styles.description}>истребление мышей, крыс, кротов и прочих видов грызунов</p>
                 <Link onClick={handleSetActiveDeratizationTab} to='/services' className={styles.more}>Подробнее</Link>
               </div>
             </div>
@@ -71,7 +71,7 @@ export const SliderAboutDesinfection = () => {
               </div>
               <div>
                 <h2 className={styles.title}>Дезинсекция</h2>
-                <p className={styles.description}>уничтожение бактерий, грибков, вирусов, плесени</p>
+                <p className={styles.description}>уничтожение различных видов насекомых, являющихся вредителями</p>
                 <Link onClick={handleSetActiveDisinsectionTab} to='/services' className={styles.more}>Подробнее</Link>
               </div>
             </div>
