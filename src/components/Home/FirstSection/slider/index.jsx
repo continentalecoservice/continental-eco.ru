@@ -90,7 +90,7 @@ export const SliderAboutDesinfection = () => {
         <button className={styles.navigationButton} onClick={next}>
           <ArrowRightSVG />
           <svg className={styles.arrowIcon} xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-            <g fill="none" stroke="#068dada" strokeWidth="1.5" strokeLinejoin="round" strokeMiterlimit="10">
+            <g fill="none" stroke="#2175FF" strokeWidth="1.5" strokeLinejoin="round" strokeMiterlimit="10">
               <circle className={styles.arrowIconCircle} cx="16" cy="16" r="15.12"></circle>
             </g>
           </svg>

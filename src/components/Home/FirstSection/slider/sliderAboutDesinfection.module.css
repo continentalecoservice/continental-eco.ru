@@ -42,13 +42,13 @@
   height: 100%;
   position: absolute;
   vertical-align: middle;
-  transition: transform 2s ease;
+  transition: transform .5s ease;
 }
 
 .arrowIconCircle {
   stroke-dasharray: 95;
   stroke-dashoffset: 95;
-  transition: stroke-dashoffset 2s ease;
+  transition: stroke-dashoffset .5s ease;
 }
 
 .navigationButton:hover .arrowIcon {
