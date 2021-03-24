@@ -19,7 +19,7 @@ export const DesinfectionContent = ({ handleOpenModal }) => {
           <li className={styles.contentListItem}>Обработка поверхностей дезинфицирующим раствором</li>
           <li className={styles.contentListItem}>Использование ультрафиолетового бактерицидного излучения для обеззараживание воздуха </li>
           <li className={styles.contentListItem}>Предоставление полного пакета документов, необходимого для Роспотребнадзора.</li>
-          <li className={styles.contentListItem}>Круглосуточный график - заявки принимаються 24/7, включая выходные и праздничные дни</li>
+          <li className={styles.contentListItem}>Круглосуточный график - заявки принимаются 24/7, включая выходные и праздничные дни</li>
         </ul>
         <button onClick={handleOpenModal} className={styles.orderService}>заказать услугу</button>
       </div>

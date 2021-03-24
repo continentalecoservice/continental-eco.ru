@@ -20,7 +20,6 @@ export const OurServices = () => {
   return (
     <div className={styles.ourServices}>
       <h2 className={styles.title}><span>наши</span>  Услуги</h2>
-      <p className={styles.description}>Комплексное предоставление лучших услуг</p>
 
       <div className={styles.servicesItems}>
         <Link to='/services' onClick={handleSetActiveDesinfectionTab} className={styles.item}>

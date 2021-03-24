@@ -18,7 +18,7 @@ export const DisinsectionContent = ({ handleOpenModal }) => {
         <ul className={styles.contentList}>
           <li className={styles.contentListItem}>Использование химических препаратов III-IV класса опасности.</li>
           <li className={styles.contentListItem}>Бесплатное повторное проведение процедуры, если результат не был достигнут</li>
-          <li className={styles.contentListItem}>Круглосуточный график - заявки принимаються 24/7, включая выходные и праздничные дни</li>
+          <li className={styles.contentListItem}>Круглосуточный график - заявки принимаются 24/7, включая выходные и праздничные дни</li>
         </ul>
         <button onClick={handleOpenModal} className={styles.orderService}>заказать услугу</button>
       </div>

@@ -19,7 +19,7 @@ export const DeratizationContent = ({ handleOpenModal }) => {
           <li className={styles.contentListItem}>Использование ядовитых веществ и смесей в местах питания, доступа до воды и миграций грызунов</li>
           <li className={styles.contentListItem}>Применение ловушек и капканов</li>
           <li className={styles.contentListItem}>Бесплатное повторное проведение процедуры, если результат не был достигнут</li>
-          <li className={styles.contentListItem}>Круглосуточный график - заявки принимаються 24/7, включая выходные и праздничные дни</li>
+          <li className={styles.contentListItem}>Круглосуточный график - заявки принимаются 24/7, включая выходные и праздничные дни</li>
         </ul>
         <button onClick={handleOpenModal} className={styles.orderService}>заказать услугу</button>
       </div>

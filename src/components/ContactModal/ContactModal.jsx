@@ -64,7 +64,7 @@ export const ContactModal = (
             href={`tel:${socialLinks.facebook}`}
             className={styles.contactLink}
           >
-            <MessengerSVG className={styles.icon} />Messanger</a>
+            <MessengerSVG className={styles.icon} />Messenger</a>
         </li>
       </ul>
       <button

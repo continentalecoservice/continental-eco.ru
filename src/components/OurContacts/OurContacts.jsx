@@ -19,17 +19,21 @@ export const OurContacts = () => {
   return (
     <div className={styles.ourContacts} id='contacts'>
       <div className={styles.socialLinks}>
-        <a className={styles.link} href={`tel:${socialLinks.instagram}`}>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          className={styles.link}
+          href={socialLinks.instagram}>
           <span className={styles.linkWrap}>
             <InstagramSVG className={styles.linkIcon} />
           </span>
           <span className={styles.linkText}>Instagram</span>
         </a>
         <a
-          target='_blank'
+          target="_blank"
           rel="noreferrer"
           className={styles.link}
-          href={`tel:${socialLinks.facebook}`}
+          href={socialLinks.facebook}
         >
           <span className={styles.linkWrap}>
             <FacebookSVG className={styles.linkIcon} />
@@ -37,7 +41,7 @@ export const OurContacts = () => {
           <span className={styles.linkText}>Facebook</span>
         </a>
         <a
-          target='_blank'
+          target="_blank"
           rel="noreferrer"
           className={styles.link}
           href={socialLinks.whatsApp}
@@ -48,7 +52,7 @@ export const OurContacts = () => {
           <span className={styles.linkText}>Whatsapp</span>
         </a>
         <a
-          target='_blank'
+          target="_blank"
           rel="noreferrer"
           className={styles.link}
           href={socialLinks.viber}
