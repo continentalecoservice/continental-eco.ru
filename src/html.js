@@ -14,6 +14,8 @@ const HTML = (props) => {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="#D0E0D8" />
         <meta name="apple-mobile-web-app-title" content="Lazywill" />
+        <meta name="google-site-verification" content="NJ79ZVgVfMEQ3JvCfYsGmJhQyjEf62QNx02dgtxgWfc" />
+        <meta name="yandex-verification" content="76c6ad6fd174e13b" />
 
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300;400;600&family=Roboto+Slab:wght@300;400;600&display=swap" rel="stylesheet" />
