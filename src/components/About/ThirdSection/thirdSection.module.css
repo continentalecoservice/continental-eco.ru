@@ -32,9 +32,10 @@
 
 .emblemItems {
   display: flex;
+	padding: 0 14px;
   margin: 0 auto;
   flex-wrap: wrap;
-  max-width: 1084px;
+  max-width: 1200px;
   align-items: center;
   justify-content: space-between;
 }
@@ -59,7 +60,7 @@
   background-color: #C8E5EB;
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 1280px) {
   .emblemItems {
     max-width: 543px;
     justify-content: center;

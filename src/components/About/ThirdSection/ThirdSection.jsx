@@ -5,6 +5,7 @@ import Yes from '../../../images/about/yes.jpg';
 import MyDocs from '../../../images/about/myDocs.jpg';
 import Uruk from '../../../images/about/uruk.jpg';
 import Krulatskui from '../../../images/about/krulatskui.jpg';
+import Ozon from '../../../images/about/Ozon.png';
 
 import * as styles from './thirdSection.module.css';
 
@@ -28,6 +29,9 @@ export const ThirdSection = () => {
         </li>
         <li className={styles.item}>
           <img src={Krulatskui} className={styles.img} alt='Rostelekom' />
+        </li>
+        <li className={styles.item}>
+          <img src={Ozon} className={styles.img} alt='Ozon' />
         </li>
       </ul>
     </div>
