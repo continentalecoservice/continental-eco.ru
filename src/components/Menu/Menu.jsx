@@ -30,13 +30,13 @@ const Menu = () => {
     return (
       <ul className={styles.menu}>
         <li className={styles.menuItem}>
-          <Link className={styles.menuLink} to='/about'>О нас</Link>
+          <Link onClick={handleCloseMobileMenu} className={styles.menuLink} to='/about'>О нас</Link>
         </li>
         <li className={styles.menuItem}>
-          <Link className={styles.menuLink} to='/services'>Услуги</Link>
+          <Link onClick={handleCloseMobileMenu} className={styles.menuLink} to='/services'>Услуги</Link>
         </li>
         <li className={styles.menuItem}>
-          <AnchorLink stripHash to="/#contacts" className={styles.menuLink} title="Контакты">
+          <AnchorLink onAnchorLinkClick={handleCloseMobileMenu} stripHash to="/#contacts" className={styles.menuLink} title="Контакты">
             Контакты
           </AnchorLink>
         </li>

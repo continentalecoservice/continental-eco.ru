@@ -43,13 +43,8 @@
 .item {
   display: flex;
   align-items: center;
-  filter: grayscale(1);
   justify-content: center;
   transition: filter 0.3s ease-in;
-}
-
-.item:hover {
-  filter: grayscale(0);
 }
 
 .item:not(:last-child):after {

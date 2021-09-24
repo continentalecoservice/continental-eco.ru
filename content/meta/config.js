@@ -22,7 +22,7 @@ module.exports = {
   supportPhone: '+7 926 158 97 70',
   supportEmail: 'continentalecoservice@gmail.com',
   workTime: '24/7',
-  address: 'г. Москва, ул, Мосфильмовская,20/2, кв. 39.',
+  address: 'г. Москва, ул, Мосфильмовская,20/2',
   registratioInformation: {
     name: 'ИП Подольская-Коган М.С.',
     number: 'ОГРНИП: 315774600327780',
