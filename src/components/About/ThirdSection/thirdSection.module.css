@@ -47,6 +47,14 @@
   transition: filter 0.3s ease-in;
 }
 
+.spaseToTop {
+  margin-top: 20px;
+}
+
+.ozon {
+  max-width: 126px;
+}
+
 .item:not(:last-child):after {
   content: '';
   width: 1px;
@@ -63,6 +71,10 @@
 
   .item {
     margin: 0 3.5vw 56px;
+  }
+
+  .medsvc {
+    max-width: 260px;
   }
 
   .item:not(:last-child):after {
@@ -82,6 +94,10 @@
   .item {
     margin: 0;
     flex-direction: column;
+  }
+
+  .spaseToTop {
+    margin: 0;
   }
 
   .item:not(:last-child):after {

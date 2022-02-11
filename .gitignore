@@ -1,6 +1,8 @@
 node_modules/
 .cache/
 public
+package-lock.json
+yarn.lock
 
 # Local Netlify folder
 .netlify
